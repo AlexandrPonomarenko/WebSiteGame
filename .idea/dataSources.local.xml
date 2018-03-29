@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="dataSourceStorageLocal">
+    <data-source name="testproj@localhost" uuid="67f8a543-1e21-498d-9902-9c68be848229">
+      <database-info product="PostgreSQL" version="9.5.12" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.1">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>alexroot</user-name>
+      <introspection-schemas>postgres:|testproj:test,testproj</introspection-schemas>
+    </data-source>
+    <data-source name="hibernate.cfg.xml/Hibernate" uuid="13767af3-65cd-4fdc-badc-6d42ffd055cc">
+      <database-info product="PostgreSQL" version="9.5.12" jdbc-version="4.2" driver-name="PostgreSQL JDBC Driver" driver-version="42.2.1">
+        <identifier-quote-string>&quot;</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="exact" />
+      <user-name>alexroot</user-name>
+      <introspection-schemas>testproj:test,testproj</introspection-schemas>
+    </data-source>
+  </component>
+</project>
