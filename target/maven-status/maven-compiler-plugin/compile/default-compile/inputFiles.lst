@@ -5,7 +5,10 @@
 /home/alex/www/WebSiteGame/src/main/java/servlet/listeners/SContextListener.java
 /home/alex/www/WebSiteGame/src/main/java/util/pon/al/Email.java
 /home/alex/www/WebSiteGame/src/main/java/servlet/util/SUtil.java
+/home/alex/www/WebSiteGame/src/main/java/servlet/util/CheckURLRole.java
 /home/alex/www/WebSiteGame/src/main/java/hibernate/pon/al/entity/RoleE.java
+/home/alex/www/WebSiteGame/src/main/java/servlet/util/RoleMapping.java
+/home/alex/www/WebSiteGame/src/main/java/servlet/filter/pon/al/FSecurity.java
 /home/alex/www/WebSiteGame/src/main/java/servlet/util/GeneratorKeys.java
 /home/alex/www/WebSiteGame/src/main/java/servlet/controller/pon/al/SConfirm.java
 /home/alex/www/WebSiteGame/src/main/java/servlet/controller/pon/al/Smain.java
@@ -18,9 +21,11 @@
 /home/alex/www/WebSiteGame/src/main/java/dao/pon/al/user/DaoUser.java
 /home/alex/www/WebSiteGame/src/main/java/servlet/util/UserValidator.java
 /home/alex/www/WebSiteGame/src/main/java/servlet/controller/pon/al/Slogin.java
+/home/alex/www/WebSiteGame/src/main/java/servlet/controller/pon/al/SAdmin.java
 /home/alex/www/WebSiteGame/src/main/java/dao/pon/al/util/DAOUserInterface.java
 /home/alex/www/WebSiteGame/src/main/java/servlet/controller/pon/al/Sout.java
 /home/alex/www/WebSiteGame/src/main/java/servlet/util/UserAuthorization.java
 /home/alex/www/WebSiteGame/src/main/java/dao/pon/al/role/DAORole.java
 /home/alex/www/WebSiteGame/src/main/java/servlet/controller/pon/al/SHome.java
 /home/alex/www/WebSiteGame/src/main/java/servlet/controller/pon/al/Slogon.java
+/home/alex/www/WebSiteGame/src/main/java/servlet/controller/pon/al/SManager.java

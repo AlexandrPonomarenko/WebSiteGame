@@ -22,6 +22,16 @@
         <url-pattern>/*</url-pattern>
     </filter-mapping>
 
+    <filter>
+        <filter-name>FSecurity</filter-name>
+        <filter-class>servlet.filter.pon.al.FSecurity</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>FSecurity</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
   <servlet>
     <servlet-name>Smain</servlet-name>
     <servlet-class>servlet.controller.pon.al.Smain</servlet-class>
@@ -57,4 +67,27 @@
         <servlet-name>SConfirm</servlet-name>
         <url-pattern>/activate/access</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SAdmin</servlet-name>
+        <servlet-class>servlet.controller.pon.al.SAdmin</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SAdmin</servlet-name>
+        <url-pattern>/fullreport</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SManager</servlet-name>
+        <servlet-class>servlet.controller.pon.al.SManager</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SManager</servlet-name>
+        <url-pattern>/reportUser</url-pattern>
+    </servlet-mapping>
+    <!--<jsp-config>-->
+        <!--<jsp-property-group>-->
+            <!--<url-pattern></url-pattern>-->
+        <!--</jsp-property-group>-->
+    <!--</jsp-config>-->
 </web-app>

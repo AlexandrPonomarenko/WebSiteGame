@@ -11,7 +11,8 @@
 <head>
     <meta content="text/html" charset="UTF-8">
     <title>Welcome to the home</title>
-    <jsp:include page="${pageContext.request.contextPath}/head/head.jsp"/>
+    <jsp:include page="../../head/head.jsp"/>
+    <%--<jsp:include page="${pageContext.request.contextPath}/head/head.jsp"/>--%>
 </head>
 <body>
     <h1>IT IS YOUR HOME MEN</h1>

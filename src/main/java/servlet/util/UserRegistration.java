@@ -24,11 +24,12 @@ public class UserRegistration {
 
     public boolean checkLoginUser(String loginUser){
         UserE user = daoUser.findUserByNickName(loginUser);
-        if(user != null){
-            valid = true;
-        }else {valid = false;}
-
-        return valid;
+        if(user.getNickname() != null){
+            System.out.println("TRUE");
+            return valid = true;
+        }
+        System.out.println("FALSE");
+        return valid = false;
     }
 
     public UserE registrationUser(UserE userE){

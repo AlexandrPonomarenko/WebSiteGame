@@ -12,7 +12,7 @@ public class UserAuthorization {
         userE = new UserE();
     }
 
-    public boolean AuthorizationUser(String nickname, String password){
+    public boolean authorizationUser(String nickname, String password){
         userE = daoUser.findUserByNickName(nickname);
         if(userE != null && userE.getPassword().equals(password)){
             return true;

@@ -18,10 +18,10 @@
         <%--<a class="logo" href="#"><img src="${pageContext.request.contextPath}/images/star-electronics-120x120.png"></a>--%>
         <nav id="nav">
             <ul>
-                <li><a href="#">Author</a></li>
-                <li><a href="#">About</a></li>
+                <li><a href="${pageContext.request.contextPath}/jsp/author.jsp">Author</a></li>
+                <li><a href="${pageContext.request.contextPath}/jsp/author.jsp">About</a></li>
 
-                <li><a href="#">Help</a></li>
+                <li><a href="${pageContext.request.contextPath}/help">Help</a></li>
                 <li><a href="${pageContext.request.contextPath}/home">home</a></li>
                 <li><a href="${pageContext.request.contextPath}/login">Login</a></li>
                 <li><a href="${pageContext.request.contextPath}/logon">Logon</a></li>

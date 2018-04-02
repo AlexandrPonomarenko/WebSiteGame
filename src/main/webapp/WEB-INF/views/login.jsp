@@ -11,10 +11,19 @@
 <head>
     <meta content="text/html" charset="UTF-8">
     <title>Login</title>
-    <jsp:include page="${pageContext.request.contextPath}/head/head.jsp"/>
+    <jsp:include page="../../head/head.jsp"/>
+    <%--<jsp:include page="${pageContext.request.contextPath}/head/head.jsp"/>--%>
 </head>
 <body>
     <h3>HELLO THIS IS LOGIN</h3>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <c:if test="${requestScope.warning != null}">
+        <h2>${requestScope.warning}</h2>
+    </c:if>
     <div class="form">
         <div class="one">
             <form method="POST" action="login">
@@ -54,5 +63,7 @@
                     <button class="submit-button" type="submit">LogIn</button>
                 </p>
             </form>
-</body>
+        </div>
+    </div>
+    </body>
 </html>

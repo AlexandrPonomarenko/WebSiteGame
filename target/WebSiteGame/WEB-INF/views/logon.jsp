@@ -9,9 +9,20 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
+    <meta content="text/html" charset="UTF-8">
     <title>Logon</title>
+    <jsp:include page="../../head/head.jsp"/>
+    <%--<jsp:include page="${pageContext.request.contextPath}/head/head.jsp"/>--%>
 </head>
 <body>
+
+<br>
+<br>
+<br>
+<br>
+    <c:if test="${requestScope.warning != null}">
+        <h2>${warning}</h2>
+    </c:if>
 <div class="parent">
     <div class="child1">
         <span id="one">Choose your dream</span>

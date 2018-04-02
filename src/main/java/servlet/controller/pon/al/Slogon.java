@@ -20,7 +20,7 @@ public class Slogon extends HttpServlet {
         ua = new UserAuthorization();
         su = new SUtil();
         HttpSession session;
-        if(ua.AuthorizationUser(request.getParameter("login"), request.getParameter("password"))){
+        if(ua.authorizationUser(request.getParameter("login"), request.getParameter("password"))){
             session = su.getCreatedSession(request);
             session.setAttribute("nickname", ua.getUser().getNickname());
             session.setAttribute("id", ua.getUser().getId());
@@ -29,6 +29,7 @@ public class Slogon extends HttpServlet {
 
             response.sendRedirect(request.getContextPath()+ "/home");
         }else{
+            request.setAttribute("warning", "Ooopss... Incorrect login or password");
             request.getRequestDispatcher("/WEB-INF/views/logon.jsp").forward(request, response);
         }
     }

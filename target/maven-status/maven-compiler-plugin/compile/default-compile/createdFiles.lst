@@ -5,8 +5,10 @@ servlet/controller/pon/al/SConfirm.class
 hibernate/pon/al/entity/UserE.class
 dao/pon/al/statgame/DAOGameStat.class
 servlet/util/GeneratorKeys.class
+servlet/util/RoleMapping.class
 servlet/controller/pon/al/Smain.class
 dao/pon/al/util/DAORoleInterface.class
+servlet/controller/pon/al/SAdmin.class
 servlet/util/UserAuthorization.class
 servlet/util/UserValidator.class
 hibernate/pon/al/util/Main.class
@@ -15,6 +17,8 @@ hibernate/pon/al/util/HibernateUtil.class
 servlet/listeners/SContextListener.class
 servlet/controller/pon/al/Slogon.class
 servlet/controller/pon/al/Sout.class
+servlet/controller/pon/al/SManager.class
+servlet/util/CheckURLRole.class
 hibernate/pon/al/entity/GameStatE.class
 util/pon/al/Email$1.class
 dao/pon/al/util/AbstractDAO.class
@@ -24,4 +28,5 @@ dao/pon/al/util/DAOUserInterface.class
 hibernate/pon/al/entity/RoleE.class
 servlet/controller/pon/al/SHome.class
 servlet/util/UserRegistration.class
+servlet/filter/pon/al/FSecurity.class
 hibernate/pon/al/util/SessionUtil.class

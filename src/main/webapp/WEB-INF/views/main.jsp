@@ -11,12 +11,13 @@
 <head>
     <meta content="text/html" charset="UTF-8">
     <title>Main</title>
-    <jsp:include page="${pageContext.request.contextPath}/head/head.jsp"/>
+    <%--<jsp:include page="${pageContext.request.contextPath}/webapp/head/head.jsp"/>--%>
+    <jsp:include page="/head/head.jsp"/>
 </head>
 <body>
-
+<%--/home/alex/www/WebSiteGame/src/main/webapp/head/head.jsp--%>
     <%--<jsp:include page="../../head/head.jsp"/>--%>
-
+<%--Работает только так<code><jsp:include page="../../head/head.jsp"/></code>--%>
 
     <h2>HELLOOO</h2>
 </body>

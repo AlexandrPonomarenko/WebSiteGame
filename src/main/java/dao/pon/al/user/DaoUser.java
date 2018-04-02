@@ -128,7 +128,7 @@ public class DaoUser extends AbstractDAO<UserE, Integer> implements DAOUserInter
         try {
             userE = (UserE) session.createCriteria(UserE.class).add(Restrictions.eq("nickname", nickname)).uniqueResult();
             if(userE != null) {
-                System.out.println(userE.toString());
+                System.out.println(" IT IS FROM findUserByNickName = " +userE.toString());
             }
             tx.commit();
         }catch (HibernateException e){

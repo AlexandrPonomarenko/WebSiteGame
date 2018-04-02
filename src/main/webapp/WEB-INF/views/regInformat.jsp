@@ -11,7 +11,8 @@
 <head>
     <meta content="text/html" charset="UTF-8">
     <title>Info</title>
-    <jsp:include page="${pageContext.request.contextPath}/head/head.jsp"/>
+    <jsp:include page="../../head/head.jsp"/>
+    <%--<jsp:include page="${pageContext.request.contextPath}/head/head.jsp"/>--%>
 </head>
 <body>
     <h1> Thank you for registration on ours site! We are send you email and you have to confirm registration for ended.</h1>

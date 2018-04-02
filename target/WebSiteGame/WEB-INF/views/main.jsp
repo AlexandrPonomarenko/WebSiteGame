@@ -9,12 +9,15 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
+    <meta content="text/html" charset="UTF-8">
     <title>Main</title>
+    <%--<jsp:include page="${pageContext.request.contextPath}/webapp/head/head.jsp"/>--%>
+    <jsp:include page="/head/head.jsp"/>
 </head>
 <body>
-
-    <jsp:include page="../../head/head.jsp"/>
-
+<%--/home/alex/www/WebSiteGame/src/main/webapp/head/head.jsp--%>
+    <%--<jsp:include page="../../head/head.jsp"/>--%>
+<%--Работает только так<code><jsp:include page="../../head/head.jsp"/></code>--%>
 
     <h2>HELLOOO</h2>
 </body>

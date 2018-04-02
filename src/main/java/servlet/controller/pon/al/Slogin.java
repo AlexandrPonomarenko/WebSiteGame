@@ -22,13 +22,13 @@ import java.io.IOException;
 @WebServlet(name = "login", urlPatterns = "/login")
 public class Slogin extends HttpServlet {
 
-    private UserRegistration us;
+    private UserRegistration ur;
 //    private GeneratorKeys gk;
 
     @Override
     public void init() throws ServletException {
         super.init();
-        us = new UserRegistration();
+        ur = new UserRegistration();
 //        gk = new GeneratorKeys();
     }
 
@@ -43,13 +43,17 @@ public class Slogin extends HttpServlet {
         userE.setPasswordTwo(request.getParameter("password2"));
         userE.setStatus("ON");
 
-        if(!us.checkLoginUser(userE.getNickname())){
-            userE = us.registrationUser(userE);
-            email = new Email(userE, "Confirm registration", "If you want ended registration you need confirm account" + us.getLink());
+        if(!ur.checkLoginUser(userE.getNickname())){
+            System.out.println("ZASHOL");
+            userE = ur.registrationUser(userE);
+            email = new Email(userE, "Confirm registration", "If you want ended registration you need confirm account" + ur.getLink());
             email.sendEmail();
             System.out.println(" Success ---- " + userE.toString() + " ------ ");
 //            response.sendRedirect(request.getContextPath() + "/home");
             request.getRequestDispatcher("WEB-INF/views/regInformat.jsp").forward(request, response);
+        }else{
+            request.setAttribute("warning", "Ooops User with nickname already exist");
+            request.getRequestDispatcher("WEB-INF/views/login.jsp").forward(request, response);
         }
 //        userE = daoUser.findUserByNickName(userE.getNickname());
 //        System.out.println("---- " + userE.toString() + " ------ ");
