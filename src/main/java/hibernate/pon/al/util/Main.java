@@ -8,6 +8,7 @@ import hibernate.pon.al.entity.RoleE;
 import hibernate.pon.al.entity.UserE;
 import org.hibernate.*;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
@@ -15,8 +16,8 @@ import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         List<Object> userEntitylist = null;
-//        SessionFactory sessionFactory =
-//                HibernateUtil.buildSessionFactory();
+        SessionFactory sessionFactory =
+                HibernateUtil.buildSessionFactory();
 //        Session session = sessionFactory.openSession();
 //        Transaction tx;
         try{
@@ -103,6 +104,9 @@ public class Main {
 //            getNameRole();
 //            ddd();
 //            System.out.println("- " + randomGen() + " -");
+//            All();
+//            addGame();
+            AllUsers();
 //            tx.commit();
         }catch (Exception e){
             e.printStackTrace();
@@ -110,7 +114,7 @@ public class Main {
 //            session.beginTransaction().rollback();
         }finally {
 //            session.close();
-//            HibernateUtil.shutdown();
+            HibernateUtil.shutdown();
             System.out.println("CLOSE SessionFactory");
         }
     }
@@ -171,38 +175,96 @@ public class Main {
         daoRole.update(roleE);
     }
 
-    public static void ddd(){
+//    public static void ddd(){
+//        DaoUser daoUser = new DaoUser();
+//        UserE userE = daoUser.findUserByNickName("popopopo");
+//        if(userE != null){
+//            System.out.println("EST");
+//        }else{
+//            System.out.println("NTE");
+//        }
+//
+//         userE = daoUser.findUserByNickName("olololo");
+//        if(userE != null) System.out.println(userE.toString());
+//    }
+//
+//    public static void getNameRole(){
+//        DAORole daoRole = new DAORole();
+//        RoleE roleE = daoRole.getRoleByName("user");
+//        if(roleE != null){
+//            System.out.println("EST");
+//        }else{
+//            System.out.println("NTE");
+//        }
+//        System.out.println(roleE.toString());
+//    }
+
+//    public static String randomGen(){
+//        String key ="";
+//        char[] abs = {'q','w','e','r','t','y','u','i','o','p','a','s','d','f',
+//                'g','h','j','k','l','z','x','c','v','b','n','m','1','2','3','4','5','6','7','8','9','0',};
+//        Random random = new Random();
+//        for (int i = 0; i < abs.length / 2; i++){
+//             key += abs[random.nextInt(abs.length)];
+//        }
+//        return key;
+//    }
+
+    public static void addGame(){
+        UserE userE = new UserE();
+        GameStatE gameStatE;
         DaoUser daoUser = new DaoUser();
-        UserE userE = daoUser.findUserByNickName("popopopo");
-        if(userE != null){
-            System.out.println("EST");
-        }else{
-            System.out.println("NTE");
+        DAOGameStat daoGameStat = new DAOGameStat();
+
+        userE = daoUser.findUserByNickName("b");
+
+        for (int i = 0; i < 10; i++){
+            gameStatE = new GameStatE();
+            gameStatE.setLost(i);
+            gameStatE.setVin(i + 1);
+            userE.getStatgame().add(gameStatE);
+            gameStatE.setUserE(userE);
+            daoUser.update(userE);
         }
 
-         userE = daoUser.findUserByNickName("olololo");
-        if(userE != null) System.out.println(userE.toString());
     }
 
-    public static void getNameRole(){
-        DAORole daoRole = new DAORole();
-        RoleE roleE = daoRole.getRoleByName("user");
-        if(roleE != null){
-            System.out.println("EST");
-        }else{
-            System.out.println("NTE");
+    public static void All(){
+        UserE userE = new UserE();
+        DaoUser daoUser = new DaoUser();
+        userE = daoUser.getEntityById(47);
+        System.out.println("----------------- " + userE.toString());
+
+        for(GameStatE gameStatE: userE.getStatgame()){
+//            System.out.println("++++++++++++ " + gameStatE.toString());
+            System.out.println(" ID " + gameStatE.getId_game() + " L" + gameStatE.getLost() + " V " + gameStatE.getVin() + " H " +
+                    gameStatE.hashCode() + " U " +
+                    gameStatE.getUserE().getNickname());
         }
-        System.out.println(roleE.toString());
+
     }
 
-    public static String randomGen(){
-        String key ="";
-        char[] abs = {'q','w','e','r','t','y','u','i','o','p','a','s','d','f',
-                'g','h','j','k','l','z','x','c','v','b','n','m','1','2','3','4','5','6','7','8','9','0',};
-        Random random = new Random();
-        for (int i = 0; i < abs.length / 2; i++){
-             key += abs[random.nextInt(abs.length)];
+    public static void AllUsers(){
+        UserE userE = new UserE();
+        DaoUser daoUser = new DaoUser();
+        List<UserE> u = new ArrayList<>();
+        u = daoUser.getAll();
+//        System.out.println("----------------- " + userE.toString());
+
+        for(UserE use: u){
+            System.out.println("++++++++++++ " + use.toString());
+            System.out.println("----------------- ");
+//            if(use.getStatgame().size() > 0){
+//                for(GameStatE g : use.getStatgame()){
+//                    System.out.println("======================== " + g.toString());
+//                }
+//            }
+//            System.out.println(" ID " + gameStatE.getId_game() + " L" + gameStatE.getLost() + " V " + gameStatE.getVin() + " H " +
+//                    gameStatE.hashCode() + " U " +
+//                    gameStatE.getUserE().getNickname());
+
+
         }
-        return key;
+
     }
 }

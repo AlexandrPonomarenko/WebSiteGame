@@ -1,5 +1,7 @@
 package servlet.controller.pon.al;
 
+import servlet.util.HistoryGame;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,6 +16,12 @@ public class SHome extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        HistoryGame historyGame = new HistoryGame();
+        request.setAttribute("setGame", historyGame.getList(request));
+        request.setAttribute("sumVins", historyGame.getAllVin());
+        request.setAttribute("sumLost", historyGame.getSunGame() - historyGame.getAllVin());
+        request.setAttribute("allGame", historyGame.getSunGame());
+//        System.out.println(historyGame.getAllVin() + "+_+_+_+_+_++_+_+_+_" + c);
         request.getRequestDispatcher("WEB-INF/views/home.jsp").forward(request, response);
     }
 }

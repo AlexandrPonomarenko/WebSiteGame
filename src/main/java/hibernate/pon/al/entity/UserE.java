@@ -45,7 +45,7 @@ public class UserE implements Serializable{
     @JoinColumn(name = "id_role", nullable = false)
     private RoleE roleE;
 
-    @OneToMany(mappedBy = "userE",cascade = CascadeType.ALL)
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "userE",cascade = CascadeType.ALL)
     private Set<GameStatE> statgame = new HashSet<GameStatE>();
 
     public UserE(){}
@@ -153,12 +153,20 @@ public class UserE implements Serializable{
         this.roleE = roleE;
     }
 
+    public String getRoleName(){
+        return getRoleE().getRole();
+    }
+
     public Set<GameStatE> getStatgame() {
         return statgame;
     }
 
     public void setStatgame(Set<GameStatE> statgame) {
         this.statgame = statgame;
+    }
+
+    public int getSizeStatGame(){
+        return getStatgame().size();
     }
 
     @Override

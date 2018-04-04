@@ -35,6 +35,7 @@ public class DaoUser extends AbstractDAO<UserE, Integer> implements DAOUserInter
             System.out.println("Error in method getAll " + e.getMessage());
             return users;
         }finally {
+            System.out.println("Sesion close getAll - in class USER");
             session.close();
         }
         return users;
@@ -53,6 +54,7 @@ public class DaoUser extends AbstractDAO<UserE, Integer> implements DAOUserInter
             System.out.println("Error in method update " + e.getMessage());
             return null;
         }finally {
+            System.out.println("Sesion close update - in class USER");
             session.close();
         }
         return entity;
@@ -75,6 +77,7 @@ public class DaoUser extends AbstractDAO<UserE, Integer> implements DAOUserInter
             e.printStackTrace();
             System.out.println("Error in method getEntityById " + e.getMessage());
         }finally {
+            System.out.println("Sesion close getEntityById - in class USER");
             session.close();
         }
         return userE;
@@ -96,6 +99,7 @@ public class DaoUser extends AbstractDAO<UserE, Integer> implements DAOUserInter
             System.out.println("Error in method delete " + e.getMessage());
             return false;
         }finally {
+            System.out.println("Sesion close delete - in class USER");
             session.close();
         }
         return true;
@@ -115,6 +119,7 @@ public class DaoUser extends AbstractDAO<UserE, Integer> implements DAOUserInter
             System.out.println("Error in method create " + e.getMessage());
             return false;
         }finally {
+            System.out.println("Sesion close create - in class USER");
             session.close();
         }
         return true;
@@ -136,6 +141,7 @@ public class DaoUser extends AbstractDAO<UserE, Integer> implements DAOUserInter
             e.printStackTrace();
             System.out.println("Error in method findUserByNickName " + e.getMessage());
         }finally {
+            System.out.println("Sesion close findUserByNickName - in class USER");
             session.close();
         }
 
@@ -158,6 +164,7 @@ public class DaoUser extends AbstractDAO<UserE, Integer> implements DAOUserInter
             e.printStackTrace();
             System.out.println("Error in method confirmKey " + e.getMessage());
         }finally {
+            System.out.println("Sesion close findConfirmKey - in class USER");
             session.close();
         }
 

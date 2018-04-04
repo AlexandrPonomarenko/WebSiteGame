@@ -71,6 +71,10 @@ public class GameStatE  implements Serializable{
         this.userE = userE;
     }
 
+    public String getNameUser(){
+        return getUserE().getNickname();
+    }
+
     @Override
     public String toString() {
         return "GameStatE{" +

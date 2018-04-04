@@ -19,13 +19,29 @@
         <nav id="nav">
             <ul>
                 <li><a href="${pageContext.request.contextPath}/jsp/author.jsp">Author</a></li>
-                <li><a href="${pageContext.request.contextPath}/jsp/author.jsp">About</a></li>
+                <li><a href="${pageContext.request.contextPath}/jsp/about.jsp">About</a></li>
 
                 <li><a href="${pageContext.request.contextPath}/help">Help</a></li>
                 <li><a href="${pageContext.request.contextPath}/home">home</a></li>
-                <li><a href="${pageContext.request.contextPath}/login">Login</a></li>
-                <li><a href="${pageContext.request.contextPath}/logon">Logon</a></li>
-                    <%--<li><a href="${pageContext.request.contextPath}/logOut">Log out</a></li>--%>
+                <c:if test="${sessionScope.nickname == null}">
+                    <li><a href="${pageContext.request.contextPath}/login">Login</a></li>
+                    <li><a href="${pageContext.request.contextPath}/logon">Logon</a></li>
+                </c:if>
+                <c:if test="${sessionScope.nickname != null}">
+                    <li><a href="${pageContext.request.contextPath}/logout">Logout</a></li>
+                </c:if>
+
+                                                <%--part manager--%>
+
+                <c:if test="${sessionScope.role == 'manager'}">
+                    <li><a href="${pageContext.request.contextPath}/reportUser">Report</a></li>
+                </c:if>
+
+                                                <%--part admin--%>
+                <c:if test="${sessionScope.role == 'admin'}">
+                    <li><a href="${pageContext.request.contextPath}/reportUser">Report</a></li>
+                    <li><a href="${pageContext.request.contextPath}/fullreport">FullReport</a></li>
+                </c:if>
             </ul>
         </nav>
         <%--<a class="garage" href="${pageContext.request.contextPath}/yourOffice"><span class="icon-home"></span></a>--%>

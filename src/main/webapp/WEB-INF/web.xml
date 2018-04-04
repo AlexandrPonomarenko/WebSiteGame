@@ -85,6 +85,15 @@
         <servlet-name>SManager</servlet-name>
         <url-pattern>/reportUser</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>SMore</servlet-name>
+        <servlet-class>servlet.controller.pon.al.SMore</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SMore</servlet-name>
+        <url-pattern>/reportUser/more</url-pattern>
+    </servlet-mapping>
     <!--<jsp-config>-->
         <!--<jsp-property-group>-->
             <!--<url-pattern></url-pattern>-->

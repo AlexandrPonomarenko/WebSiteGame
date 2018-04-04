@@ -25,7 +25,13 @@ dao/pon/al/util/AbstractDAO.class
 servlet/controller/pon/al/Slogin.class
 util/pon/al/Email.class
 dao/pon/al/util/DAOUserInterface.class
+servlet/util/ReportUser.class
+servlet/util/HistoryGame.class
+servlet/controller/pon/al/SHelp.class
+servlet/util/ReportAdmin.class
+servlet/controller/pon/al/SMore.class
 hibernate/pon/al/entity/RoleE.class
+servlet/util/OutHome.class
 servlet/controller/pon/al/SHome.class
 servlet/util/UserRegistration.class
 servlet/filter/pon/al/FSecurity.class

@@ -1,5 +1,7 @@
 package servlet.controller.pon.al;
 
+import servlet.util.ReportAdmin;
+
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,6 +16,8 @@ public class SAdmin extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        ReportAdmin rp = new ReportAdmin();
+        request.setAttribute("allliset", rp.getAllUsers(request));
         request.getRequestDispatcher("WEB-INF/views/fulluserstat.jsp").forward(request,response);
     }
 }

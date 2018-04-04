@@ -15,6 +15,17 @@
     <%--<jsp:include page="${pageContext.request.contextPath}/head/head.jsp"/>--%>
 </head>
 <body>
-    <h1>IT IS YOUR HOME MEN</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+    <h1>IT IS YOUR HOME MEN ${sessionScope.nickname} your status ${sessionScope.status}</h1>
+    <h3>${requestScope.allGame}.........${requestScope.sumVins}........ ${requestScope.sumLost}</h3>
+    <c:forEach items="${requestScope.setGame}" var="game">
+        <span>
+            <p>${game.id_game}----${game.vin}------${game.lost}</p>
+        </span>
+
+    </c:forEach>
 </body>
 </html>

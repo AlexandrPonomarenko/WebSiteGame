@@ -14,6 +14,10 @@
     <jsp:include page="../../head/head.jsp"/>
 </head>
 <body>
+    <br>
+    <br>
+    <br>
+    <br>
     <h1>HELP</h1>
 </body>
 </html>
