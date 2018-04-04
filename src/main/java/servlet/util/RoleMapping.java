@@ -24,6 +24,7 @@ public class RoleMapping {
         List<String> urlManager = new ArrayList<>();
         urlManager.addAll(urlUser);
         urlManager.add("/reportUser");
+        urlManager.add("/info");
         urlManager.add("/reportUser/more");
         map.put(MANAGER, urlManager);
 

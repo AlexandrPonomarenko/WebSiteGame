@@ -25,7 +25,7 @@ public class SManager extends HttpServlet {
         }else{
             session.setAttribute("send",request.getParameter("nickname"));
             System.out.println("----------------------");
-            response.sendRedirect(request.getContextPath() + "/help");
+            response.sendRedirect(request.getContextPath() + "/info");
         }
     }
 

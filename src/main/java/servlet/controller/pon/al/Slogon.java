@@ -26,6 +26,7 @@ public class Slogon extends HttpServlet {
             session.setAttribute("id", ua.getUser().getId());
             session.setAttribute("role", ua.getUser().getRoleE().getRole());
             session.setAttribute("status", ua.getUser().getStatus());
+//            session.setAttribute("lastURL", );
 
             response.sendRedirect(request.getContextPath()+ "/home");
         }else{

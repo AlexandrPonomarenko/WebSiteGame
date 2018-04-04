@@ -55,9 +55,6 @@ public class Slogin extends HttpServlet {
             request.setAttribute("warning", "Ooops User with nickname already exist");
             request.getRequestDispatcher("WEB-INF/views/login.jsp").forward(request, response);
         }
-//        userE = daoUser.findUserByNickName(userE.getNickname());
-//        System.out.println("---- " + userE.toString() + " ------ ");
-
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

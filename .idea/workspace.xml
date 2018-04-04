@@ -8,52 +8,35 @@
   <component name="ChangeListManager">
     <list default="true" id="f5f2e367-fec7-4fe0-8ecd-1e15e940c0bc" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/pon/al/role/DAORole.java" afterPath="$PROJECT_DIR$/src/main/java/dao/pon/al/role/DAORole.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/pon/al/statgame/DAOGameStat.java" afterPath="$PROJECT_DIR$/src/main/java/dao/pon/al/statgame/DAOGameStat.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dao/pon/al/user/DaoUser.java" afterPath="$PROJECT_DIR$/src/main/java/dao/pon/al/user/DaoUser.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/pon/al/entity/GameStatE.java" afterPath="$PROJECT_DIR$/src/main/java/hibernate/pon/al/entity/GameStatE.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/pon/al/entity/UserE.java" afterPath="$PROJECT_DIR$/src/main/java/hibernate/pon/al/entity/UserE.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/pon/al/util/Main.java" afterPath="$PROJECT_DIR$/src/main/java/hibernate/pon/al/util/Main.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SAdmin.java" afterPath="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SAdmin.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SHome.java" afterPath="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SHome.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SHelp.java" afterPath="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SHelp.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SManager.java" afterPath="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SManager.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/Sout.java" afterPath="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/Sout.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/Slogin.java" afterPath="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/Slogin.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/Slogon.java" afterPath="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/Slogon.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/util/ReportAdmin.java" afterPath="$PROJECT_DIR$/src/main/java/servlet/util/ReportAdmin.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/servlet/util/RoleMapping.java" afterPath="$PROJECT_DIR$/src/main/java/servlet/util/RoleMapping.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/util/pon/al/Email.java" afterPath="$PROJECT_DIR$/src/main/java/util/pon/al/Email.java" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/fulluserstat.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/fulluserstat.jsp" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/help.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/help.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userstat.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userstat.jsp" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/head/head.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/head/head.jsp" />
       <change beforePath="$PROJECT_DIR$/target/WebSiteGame.war" afterPath="$PROJECT_DIR$/target/WebSiteGame.war" />
-      <change beforePath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/dao/pon/al/role/DAORole.class" afterPath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/dao/pon/al/role/DAORole.class" />
-      <change beforePath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/dao/pon/al/statgame/DAOGameStat.class" afterPath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/dao/pon/al/statgame/DAOGameStat.class" />
-      <change beforePath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/dao/pon/al/user/DaoUser.class" afterPath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/dao/pon/al/user/DaoUser.class" />
-      <change beforePath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/hibernate/pon/al/entity/GameStatE.class" afterPath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/hibernate/pon/al/entity/GameStatE.class" />
-      <change beforePath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/hibernate/pon/al/entity/UserE.class" afterPath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/hibernate/pon/al/entity/UserE.class" />
-      <change beforePath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/hibernate/pon/al/util/Main.class" afterPath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/hibernate/pon/al/util/Main.class" />
       <change beforePath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/servlet/controller/pon/al/SAdmin.class" afterPath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/servlet/controller/pon/al/SAdmin.class" />
-      <change beforePath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/servlet/controller/pon/al/SHome.class" afterPath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/servlet/controller/pon/al/SHome.class" />
+      <change beforePath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/servlet/controller/pon/al/SHelp.class" afterPath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/servlet/controller/pon/al/SHelp.class" />
       <change beforePath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/servlet/controller/pon/al/SManager.class" afterPath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/servlet/controller/pon/al/SManager.class" />
-      <change beforePath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/servlet/controller/pon/al/Sout.class" afterPath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/servlet/controller/pon/al/Sout.class" />
+      <change beforePath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/servlet/controller/pon/al/Slogon.class" afterPath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/servlet/controller/pon/al/Slogon.class" />
+      <change beforePath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/servlet/util/ReportAdmin.class" afterPath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/servlet/util/ReportAdmin.class" />
       <change beforePath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/servlet/util/RoleMapping.class" afterPath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/servlet/util/RoleMapping.class" />
+      <change beforePath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/util/pon/al/Email$1.class" afterPath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/util/pon/al/Email$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/util/pon/al/Email.class" afterPath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/util/pon/al/Email.class" />
       <change beforePath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/views/fulluserstat.jsp" afterPath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/views/fulluserstat.jsp" />
       <change beforePath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/views/help.jsp" afterPath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/views/help.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/views/home.jsp" afterPath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/views/home.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/views/userstat.jsp" afterPath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/views/userstat.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/web.xml" afterPath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/web.xml" />
-      <change beforePath="$PROJECT_DIR$/target/WebSiteGame/head/head.jsp" afterPath="$PROJECT_DIR$/target/WebSiteGame/head/head.jsp" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/pon/al/role/DAORole.class" afterPath="$PROJECT_DIR$/target/classes/dao/pon/al/role/DAORole.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/pon/al/statgame/DAOGameStat.class" afterPath="$PROJECT_DIR$/target/classes/dao/pon/al/statgame/DAOGameStat.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/dao/pon/al/user/DaoUser.class" afterPath="$PROJECT_DIR$/target/classes/dao/pon/al/user/DaoUser.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/pon/al/entity/GameStatE.class" afterPath="$PROJECT_DIR$/target/classes/hibernate/pon/al/entity/GameStatE.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/pon/al/entity/UserE.class" afterPath="$PROJECT_DIR$/target/classes/hibernate/pon/al/entity/UserE.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/hibernate/pon/al/util/Main.class" afterPath="$PROJECT_DIR$/target/classes/hibernate/pon/al/util/Main.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/servlet/controller/pon/al/SAdmin.class" afterPath="$PROJECT_DIR$/target/classes/servlet/controller/pon/al/SAdmin.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/servlet/controller/pon/al/SHome.class" afterPath="$PROJECT_DIR$/target/classes/servlet/controller/pon/al/SHome.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servlet/controller/pon/al/SHelp.class" afterPath="$PROJECT_DIR$/target/classes/servlet/controller/pon/al/SHelp.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/servlet/controller/pon/al/SManager.class" afterPath="$PROJECT_DIR$/target/classes/servlet/controller/pon/al/SManager.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/servlet/controller/pon/al/Sout.class" afterPath="$PROJECT_DIR$/target/classes/servlet/controller/pon/al/Sout.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servlet/controller/pon/al/Slogon.class" afterPath="$PROJECT_DIR$/target/classes/servlet/controller/pon/al/Slogon.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servlet/util/ReportAdmin.class" afterPath="$PROJECT_DIR$/target/classes/servlet/util/ReportAdmin.class" />
       <change beforePath="$PROJECT_DIR$/target/classes/servlet/util/RoleMapping.class" afterPath="$PROJECT_DIR$/target/classes/servlet/util/RoleMapping.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/util/pon/al/Email$1.class" afterPath="$PROJECT_DIR$/target/classes/util/pon/al/Email$1.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/util/pon/al/Email.class" afterPath="$PROJECT_DIR$/target/classes/util/pon/al/Email.class" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
@@ -151,75 +134,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="SManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="145">
-              <caret line="19" column="45" lean-forward="false" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SMore.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SMore.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="252">
-              <caret line="25" column="61" lean-forward="false" selection-start-line="25" selection-start-column="61" selection-end-line="25" selection-end-column="61" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SAdmin.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SAdmin.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="userstat.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userstat.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="31" column="16" lean-forward="false" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fulluserstat.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/fulluserstat.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="40" column="59" lean-forward="false" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="59" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReportAdmin.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/servlet/util/ReportAdmin.java">
+      <file leaf-file-name="Slogin.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/Slogin.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="270">
-              <caret line="59" column="2" lean-forward="true" selection-start-line="59" selection-start-column="2" selection-end-line="59" selection-end-column="2" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1054#1055#0" expanded="true" />
-                <element signature="e#1081#1082#0" expanded="true" />
-              </folding>
+              <caret line="56" column="9" lean-forward="false" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="all.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/all.jsp">
+      <file leaf-file-name="CheckErrorFilds.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/servlet/error/CheckErrorFilds.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="19" column="12" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
+            <state relative-caret-position="198">
+              <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-220">
+              <caret line="28" column="28" lean-forward="true" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
               <folding />
             </state>
           </provider>
@@ -232,8 +171,8 @@
       <list>
         <option value="CSS File" />
         <option value="Interface" />
-        <option value="Class" />
         <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -248,13 +187,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/activate/Error.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/Smain.java" />
-        <option value="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SConfirm.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/activate/confirm.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/servlet/util/SUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/regInformat.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/activate/games.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/activate/achievements.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/about.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/achievements.jsp" />
@@ -268,10 +200,8 @@
         <option value="$PROJECT_DIR$/src/main/java/servlet/filter/pon/al/FSecurity.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/jsp/warning.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/Slogin.java" />
         <option value="$PROJECT_DIR$/src/main/java/servlet/util/UserRegistration.java" />
         <option value="$PROJECT_DIR$/src/main/java/servlet/util/UserAuthorization.java" />
-        <option value="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/Slogon.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/logon.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/servlet/util/OutHome.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/head/head.jsp" />
@@ -283,22 +213,31 @@
         <option value="$PROJECT_DIR$/src/main/java/dao/pon/al/user/DaoUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/pon/al/util/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/pon/al/entity/UserE.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/help.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SHelp.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/activate/more.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userstat.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/hibernate/pon/al/entity/GameStatE.java" />
         <option value="$PROJECT_DIR$/src/main/java/servlet/util/ReportUser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SManager.java" />
         <option value="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SMore.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/home.jsp" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/more.jsp" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/fulluserstat.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SAdmin.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/all.jsp" />
-        <option value="$PROJECT_DIR$/src/main/java/servlet/util/RoleMapping.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/fulluserstat.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SAll.java" />
         <option value="$PROJECT_DIR$/src/main/java/servlet/util/ReportAdmin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/Slogon.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/help.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SAdmin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SManager.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/informuser.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/servlet/util/RoleMapping.java" />
+        <option value="$PROJECT_DIR$/src/main/java/servlet/util/HelpAdMg.java" />
+        <option value="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SFromAdMg.java" />
+        <option value="$PROJECT_DIR$/src/main/java/servlet/util/Help.java" />
+        <option value="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SHelp.java" />
+        <option value="$PROJECT_DIR$/src/main/java/util/pon/al/Email.java" />
+        <option value="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/Slogin.java" />
+        <option value="$PROJECT_DIR$/src/main/java/servlet/error/CheckErrorFilds.java" />
       </list>
     </option>
   </component>
@@ -359,7 +298,6 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -417,24 +355,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="al" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebSiteGame" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebSiteGame" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="servlet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebSiteGame" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebSiteGame" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-              <item name="al" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WebSiteGame" type="b2602c69:ProjectViewProjectNode" />
@@ -444,6 +365,21 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="servlet" type="462c0819:PsiDirectoryNode" />
               <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebSiteGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebSiteGame" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="al" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebSiteGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebSiteGame" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WebSiteGame" type="b2602c69:ProjectViewProjectNode" />
@@ -473,8 +409,9 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -823,11 +760,12 @@
       <workItem from="1522488582930" duration="7748000" />
       <workItem from="1522664072183" duration="23118000" />
       <workItem from="1522743113746" duration="23985000" />
+      <workItem from="1522827857279" duration="24981000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="326100000" />
+    <option name="totallyTimeSpent" value="351081000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -839,7 +777,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1481" y="128" width="1325" height="772" extended-state="6" />
+    <frame x="1480" y="121" width="1327" height="780" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -863,9 +801,9 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16951789" sideWeight="0.634871" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23455825" sideWeight="0.17943925" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21266614" sideWeight="0.80524343" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21032056" sideWeight="0.7940075" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21266614" sideWeight="0.19475655" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21032056" sideWeight="0.2059925" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -890,54 +828,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/activate/error.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="12" column="7" lean-forward="false" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/activate/confirm.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="15" column="63" lean-forward="false" selection-start-line="15" selection-start-column="63" selection-end-line="15" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/activate/games.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/activate/achievements.jsp" />
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/about.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/achievements.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="11" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/author.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="14" lean-forward="false" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/games.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/play.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -973,7 +863,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="17" column="70" lean-forward="true" selection-start-line="17" selection-start-column="70" selection-end-line="17" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1020,14 +909,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/pon/al/util/HibernateUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/servlet/util/OutHome.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -1040,7 +921,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
           <caret line="54" column="51" lean-forward="false" selection-start-line="54" selection-start-column="51" selection-end-line="54" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1056,7 +936,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="741">
           <caret line="106" column="33" lean-forward="false" selection-start-line="106" selection-start-column="33" selection-end-line="106" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1076,7 +955,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="18" column="21" lean-forward="false" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1098,38 +976,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="28" column="28" lean-forward="true" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/activate/more.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="16" lean-forward="false" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/help.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="10" lean-forward="true" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SHelp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="7" column="27" lean-forward="true" selection-start-line="7" selection-start-column="27" selection-end-line="7" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/activate/more.jsp" />
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="324">
@@ -1138,19 +985,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/Slogin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="46" column="38" lean-forward="false" selection-start-line="46" selection-start-column="38" selection-end-line="46" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/pon/al/entity/GameStatE.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
           <caret line="73" column="29" lean-forward="false" selection-start-line="73" selection-start-column="18" selection-end-line="73" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1158,14 +996,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="20" column="4" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SHome.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="18" column="52" lean-forward="false" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
           <folding />
         </state>
       </provider>
@@ -1178,26 +1008,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/Slogon.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="27" column="40" lean-forward="false" selection-start-line="27" selection-start-column="34" selection-end-line="27" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/util/ReportUser.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="52" column="5" lean-forward="true" selection-start-line="24" selection-start-column="4" selection-end-line="52" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1106#1107#0" expanded="false" />
-            <element signature="e#1133#1134#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/regInformat.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -1206,19 +1016,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/util/RoleMapping.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="32" column="37" lean-forward="false" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/pon/al/entity/UserE.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="437">
           <caret line="151" column="2" lean-forward="false" selection-start-line="151" selection-start-column="2" selection-end-line="151" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1226,46 +1027,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/all.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="19" column="12" lean-forward="false" selection-start-line="19" selection-start-column="12" selection-end-line="19" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/fulluserstat.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="40" column="59" lean-forward="false" selection-start-line="40" selection-start-column="54" selection-end-line="40" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="145">
-          <caret line="19" column="45" lean-forward="false" selection-start-line="19" selection-start-column="45" selection-end-line="19" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SMore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="252">
-          <caret line="25" column="61" lean-forward="false" selection-start-line="25" selection-start-column="61" selection-end-line="25" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SAdmin.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1278,23 +1039,203 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/pon/al/util/HibernateUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="522">
+          <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/all.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="33">
+          <caret line="5" column="63" lean-forward="false" selection-start-line="5" selection-start-column="63" selection-end-line="5" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/fulluserstat.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="30" column="48" lean-forward="false" selection-start-line="30" selection-start-column="48" selection-end-line="30" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SAll.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="12" column="42" lean-forward="false" selection-start-line="12" selection-start-column="42" selection-end-line="12" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/userstat.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
+        <state relative-caret-position="252">
           <caret line="31" column="16" lean-forward="false" selection-start-line="31" selection-start-column="16" selection-end-line="31" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SHome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="18" column="52" lean-forward="false" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SMore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="25" column="62" lean-forward="false" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/Slogon.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="29" column="0" lean-forward="true" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/servlet/util/ReportAdmin.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="57" column="35" lean-forward="false" selection-start-line="57" selection-start-column="35" selection-end-line="57" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1054#1055#0" expanded="false" />
+            <element signature="e#1081#1082#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="27" column="54" lean-forward="false" selection-start-line="27" selection-start-column="54" selection-end-line="27" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/util/RoleMapping.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="26" column="32" lean-forward="true" selection-start-line="26" selection-start-column="32" selection-end-line="26" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/informuser.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="16" column="0" lean-forward="true" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SFromAdMg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="23" column="58" lean-forward="false" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/util/HelpAdMg.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
-          <caret line="59" column="2" lean-forward="true" selection-start-line="59" selection-start-column="2" selection-end-line="59" selection-end-column="2" />
+          <caret line="21" column="10" lean-forward="false" selection-start-line="21" selection-start-column="10" selection-end-line="21" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SHelp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="25" column="67" lean-forward="false" selection-start-line="25" selection-start-column="67" selection-end-line="25" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/util/Help.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="30" column="32" lean-forward="false" selection-start-line="30" selection-start-column="32" selection-end-line="30" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1054#1055#0" expanded="true" />
-            <element signature="e#1081#1082#0" expanded="true" />
+            <element signature="e#435#436#0" expanded="true" />
+            <element signature="e#494#495#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/util/pon/al/Email.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="100" column="9" lean-forward="true" selection-start-line="100" selection-start-column="9" selection-end-line="100" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/util/ReportUser.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="31" column="19" lean-forward="false" selection-start-line="31" selection-start-column="19" selection-end-line="31" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SAdmin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="16" column="51" lean-forward="true" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/help.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="428">
+          <caret line="47" column="64" lean-forward="false" selection-start-line="47" selection-start-column="64" selection-end-line="47" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/Slogin.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="56" column="9" lean-forward="false" selection-start-line="56" selection-start-column="9" selection-end-line="56" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/login.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-220">
+          <caret line="28" column="28" lean-forward="true" selection-start-line="28" selection-start-column="28" selection-end-line="28" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/servlet/error/CheckErrorFilds.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="8" lean-forward="false" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+          <folding />
         </state>
       </provider>
     </entry>

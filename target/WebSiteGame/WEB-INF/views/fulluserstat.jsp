@@ -28,7 +28,7 @@
                 ${user.status}...<c:out value="${user.roleName}"/>...<c:out value="${user.sizeStatGame}"/>
         </p>
 
-        <form action="reportUser" method="post">
+        <form action="fullreport" method="post">
             <button type="submit" name="bname" value="more" class="btn_more">More</button>
             <input type="hidden" name="id" value="${user.id}"/>
 

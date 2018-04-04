@@ -45,20 +45,34 @@ public class ReportAdmin {
         return user;
     }
 
-//    public String checkButton(HttpServletRequest request){
-//        if(request.getParameter("bname") != null && request.getParameter("bname").equals("more")){
-//            return "more";
-//        }else if (request.getParameter("bname") != null && request.getParameter("bname").equals("send")){
-//            return "more";
-//        }else if (request.getParameter("bname") != null && request.getParameter("bname").equals("delete")){
-//            return "more";
-//        }else if (request.getParameter("bname") != null && request.getParameter("bname").equals("block")){
-//            return "more";
-//        }
-//        return "none";
-//    }
-//
-//    public void setSessionAtribute(String atribute){
+    public String checkButton(HttpServletRequest request){
+        if(request.getParameter("bname") != null && request.getParameter("bname").equals("more")){
+            System.out.println("---" + "more " + "---");
+            session = util.getSession(request);
+            session.setAttribute("more", getAllGames(request.getParameter("id")));
+            session.setAttribute("selectuser", getSelectUser());
+            return "more";
+        }else if (request.getParameter("bname") != null && request.getParameter("bname").equals("send")){
+            System.out.println("---" + "send " + "---");
+            session = util.getSession(request);
+            session.setAttribute("send", request.getParameter("nickname"));
+            return "send";
+        }else if (request.getParameter("bname") != null && request.getParameter("bname").equals("delete")){
+            System.out.println("---" + "delete " + "---");
+//            session = util.getSession(request);
+            session.setAttribute("delete", request.getParameter("id"));
+            return "delete";
+        }else if (request.getParameter("bname") != null && request.getParameter("bname").equals("block")){
+            System.out.println("---" + "block " + "---");
+//            session = util.getSession(request);
+            session.setAttribute("block", request.getParameter("id"));
+            return "block";
+        }
+        System.out.println("---" + "none " + "---");
+        return "none";
+    }
+
+//    public void setSessionAtribute(String attribute){
 //        if(){
 //
 //        }else if(){

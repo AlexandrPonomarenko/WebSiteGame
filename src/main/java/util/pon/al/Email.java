@@ -17,12 +17,23 @@ public class Email {
     private UserE userE;
     private String subject;
     private String textMessage;
+    private String nameNoName;
+    private String emailNoName;
 
     public Email(UserE user, String sub, String m){
         properties = new Properties();
         userE = user;
         subject = sub;
         textMessage = m;
+        setProperties();
+    }
+
+    public Email(String name, String sub, String m, String email){
+        properties = new Properties();
+        subject = sub;
+        textMessage = m;
+        nameNoName = name;
+        emailNoName = email;
         setProperties();
     }
     private void setProperties(){
@@ -69,6 +80,39 @@ public class Email {
             System.out.println("Access send mail");
         }catch(MessagingException m){
             System.out.println("no send message");
+            m.printStackTrace();
+        }
+    }
+
+    public void sendUserEmail(){
+        message = new MimeMessage(getSession(WARMSTAR_EMAIL, WARMSTAR_PASSWORD));
+        try {
+                message.setFrom(new InternetAddress(WARMSTAR_EMAIL));
+                message.setRecipient(Message.RecipientType.TO, new InternetAddress("furriets@gmail.com"));
+                message.setSubject(subject);
+                message.setText(textMessage + " От " + userE.getEmail() + "---- " );
+
+                Transport.send(message);
+
+            System.out.println("Access send sendUserEmail");
+        }catch(MessagingException m){
+            System.out.println("no send message sendUserEmail");
+            m.printStackTrace();
+        }
+    }
+
+    public void sendNoNameUserEmail(){
+        message = new MimeMessage(getSession(WARMSTAR_EMAIL, WARMSTAR_PASSWORD));
+        try {
+            message.setFrom(new InternetAddress(WARMSTAR_EMAIL));
+            message.setRecipient(Message.RecipientType.TO, new InternetAddress("furriets@gmail.com"));
+            message.setSubject(subject);
+            message.setText(textMessage + " from: " + emailNoName + " Name : " + nameNoName);
+
+            Transport.send(message);
+            System.out.println("Access send sendNoNameUserEmail");
+        }catch(MessagingException m){
+            System.out.println("no send message sendNoNameUserEmail");
             m.printStackTrace();
         }
     }
