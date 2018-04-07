@@ -14,6 +14,30 @@
     <jsp:include page="../../head/head.jsp"/>
 </head>
 <body>
-    <h1>GAMES</h1>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <h1>CREATED GAMES</h1>
+    <div id="main">
+        <div id="game">
+            <form action="create" method="post">
+                <input type="hidden" name="create" value="create"/>
+                <input type="submit" value="Create game">
+            </form>
+        </div>
+
+        <div id="list_game">
+            <form action="create", method="post">
+                <c:forEach items="${requestScope.list}" var="item">
+                    <p>${item.name}</p>
+
+                </c:forEach>
+            </form>
+        </div>
+    </div>
+
+
 </body>
 </html>

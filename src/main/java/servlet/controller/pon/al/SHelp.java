@@ -1,5 +1,6 @@
 package servlet.controller.pon.al;
 
+import servlet.error.CheckErrorFilds;
 import servlet.util.Help;
 import servlet.util.HelpAdMg;
 import servlet.util.SUtil;
@@ -16,16 +17,25 @@ import java.io.IOException;
 public class SHelp extends HttpServlet {
     private SUtil util;
     private Help hp;
+    private CheckErrorFilds cef;
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         hp = new Help();
         util = new SUtil();
+        cef = new CheckErrorFilds();
         HttpSession session = util.getSession(request);
         if(session.getAttribute("nickname") != null) {
             hp.send(request.getParameter("name"), request.getParameter("texthelp"));
         }else{
-            System.out.println(request.getParameter("name")+ "==="+ request.getParameter("email")+ "====" + request.getParameter("texthelp"));
-            hp.sendNoName(request.getParameter("name"), request.getParameter("email"), request.getParameter("texthelp"));
+            if(cef.validHelp(request.getParameter("name"), request.getParameter("texthelp"), request.getParameter("email"))) {
+                System.out.println(request.getParameter("name") + "===" + request.getParameter("email") + "====" + request.getParameter("texthelp"));
+                hp.sendNoName(request.getParameter("name"), request.getParameter("email"), request.getParameter("texthelp"));
+            }else{
+                request.setAttribute("error", cef.getError());
+                request.getRequestDispatcher("WEB-INF/views/help.jsp").forward(request,response);
+                return;
+            }
         }
+//        request.setAttribute("error", cef.getError());
         request.getRequestDispatcher("WEB-INF/views/help.jsp").forward(request,response);
     }
 
@@ -34,6 +44,7 @@ public class SHelp extends HttpServlet {
         HttpSession session = util.getSession(request);
         if(session.getAttribute("nickname") != null){
             request.setAttribute("name",session.getAttribute("nickname"));
+            request.setAttribute("email",session.getAttribute("email"));
         }
         request.getRequestDispatcher("WEB-INF/views/help.jsp").forward(request,response);
     }

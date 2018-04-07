@@ -1,38 +1,47 @@
 package servlet.error;
 
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class CheckErrorFilds {
-    private String name;
-    private String password;
-    private String txms;
-    private String email;
-    private String nickname;
+//    private String name;
+//    private String password;
+//    private String txms;
+//    private String email;
+//    private String nickname;
+    private Map<String, String> error;
+    private boolean valid;
 
     public CheckErrorFilds(){
-
+        error = new HashMap<>();
+        valid = true;
     }
 
-    public CheckErrorFilds(String name, String password, String txms, String email, String nickname) {
-        this.name = name;
-        this.password = password;
-        this.txms = txms;
-        this.email = email;
-        this.nickname = nickname;
-    }
+//    public CheckErrorFilds(String name, String password, String txms, String email, String nickname) {
+//        this.name = name;
+//        this.password = password;
+//        this.txms = txms;
+//        this.email = email;
+//        this.nickname = nickname;
+//    }
 
     private boolean veryPassword(String p){
 
-        if(p == null || p.equals("")){
+        if(!validNotNullAndEmpty(p)){
+            error.put("password", "empty string");
             return false;
         }
 
         p = p.trim();
 
         if(p.length() < 5){
+            error.put("password", "to be > 5");
             return false;
         }
 
-        if(!p.matches("(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}")){
+        if(!p.matches("^.*(?=.{8,})(?=.*\\d)(?=.*[a-zA-Z])|(?=.{8,})(?=.*\\d)(?=.*[!@#$%^&])|(?=.{8,})(?=.*[a-zA-Z])(?=.*[!@#$%^&]).*$")){
+            error.put("password", "wrong schema");
             System.out.println(" M : veryPassword OUT ");
             return false;
         }
@@ -41,34 +50,40 @@ public class CheckErrorFilds {
 
     private boolean veryEmail(String email){
 
-        if(email == null || email.equals("")){
+        if(!validNotNullAndEmpty(email)){
+            error.put("email", "empty string");
             return false;
         }
 
         email = email.trim();
 
         if(email.length() < 2){
+            error.put("email", "to be > 3 char");
             return false;
         }
-        if(!email.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\\\.[a-zA-Z]{2,6}$")){
+        if(!email.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$")){
+            error.put("email", "wrong schema");
             System.out.println(" M : veryEmail OUT ");
             return false;
         }
         return true;
     }
 
-    private boolean veryTxms(String Txms){
+    private boolean veryTxms(String txms){
 
-        if(Txms == null || Txms.equals("")){
+        if(!validNotNullAndEmpty(txms)){
+            error.put("txms", "empty string");
             return false;
         }
 
-        Txms = Txms.trim();
+        txms = txms.trim();
 
-        if(Txms.length() < 14){
+        if(txms.length() < 14){
+            error.put("txms", "to be > 14 char");
             return false;
         }
-        if(!Txms.matches("[a-zA-Z]*")){
+        if(!txms.matches("[a-zA-Z]*")){
+            error.put("txms", "wrong schema");
             System.out.println(" M : veryTxms OUT ");
             return false;
         }
@@ -77,59 +92,144 @@ public class CheckErrorFilds {
 
     private boolean veryName(String name){
 
-        if(name == null || name.equals("")){
+        if(!validNotNullAndEmpty(name)){
+            error.put("name", "empty string");
             return false;
         }
 
         name = name.trim();
 
         if(name.length() < 3){
+            error.put("name", "to be > 3");
             return false;
         }
         if(!name.matches("[a-zA-Z]*")){
             System.out.println(" M : veryName OUT ");
+            error.put("name", "wrong schema");
             return false;
         }
         return true;
     }
 
-    private boolean veryNickName(String NickName){
+    private boolean veryNickName(String nickName){
 
-        if(NickName == null || NickName.equals("")){
+        if(!validNotNullAndEmpty(nickName)){
+            error.put("nickName", "empty string");
             return false;
         }
 
-        NickName = NickName.trim();
+        nickName = nickName.trim();
 
-        if(NickName.length() < 3){
+        if(nickName.length() < 3){
+            error.put("nickName", "to be > 3 char");
             return false;
         }
-        if(!NickName.matches("(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}")){
+        if(!nickName.matches("[a-zA-Z]*")){
             System.out.println("M : veryNickName OUT ");
+            error.put("nickName", "wrong schema");
             return false;
         }
         return true;
     }
+
+    private boolean verEquPasswords(String p, String p2){
+        if(p == null || p2 == null || p.equals("") || p2.equals("")){
+            return false;
+        }
+
+        if(!p.equals(p2)){
+            error.put("pas", "to be equals");
+            return false;
+        }
+
+        return true;
+    }
+
+//    public boolean validAuth2(String l, String ln, String f,String p,String pt,String e){
+//        if(veryNickName(l) && veryName(ln) && veryName(f) && veryPassword(p) &&
+//                veryPassword(pt) && verEquPasswords(p, pt) && veryEmail(e)){
+//            return true;
+//        }
+//        return false;
+//    }
 
     public boolean validAuth(String l, String ln, String f,String p,String pt,String e){
-        if(veryNickName(l) && veryName(ln) && veryName(f) && veryPassword(p)
-                && veryPassword(pt) && veryEmail(e)){
-            return true;
+        if(!veryNickName(l)){
+            valid = false;
         }
-        return false;
+        if(!veryName(ln)){
+            valid = false;
+        }
+        if(!veryName(f)){
+            valid = false;
+        }
+        if(!veryPassword(p)){
+            valid = false;
+        }
+        if(!veryPassword(pt)){
+            valid = false;
+        }
+        if(!veryPassword(e)){
+            valid = false;
+        }
+        if(!verEquPasswords(p, pt)){
+            valid = false;
+        }
+
+        return valid;
     }
 
+//    public boolean validAunt2(String l, String p){
+//        if(veryNickName(l) && veryPassword(p)){
+//            return true;
+//        }
+//        return false;
+//    }
+
     public boolean validAunt(String l, String p){
-        if(veryNickName(l) && veryPassword(p)){
+        if(!veryNickName(l)){
+            valid = false;
+        }
+        if(!veryPassword(p)){
+            valid = false;
+        }
+        return valid;
+    }
+
+
+    public boolean validHelp2(String l, String tx, String e){
+        if(veryNickName(l) && veryTxms(tx) && veryEmail(e)){
             return true;
         }
         return false;
     }
 
     public boolean validHelp(String l, String tx, String e){
-        if(veryNickName(l) && veryTxms(tx) && veryEmail(e)){
-            return true;
+        if(!veryNickName(l)){
+            valid = false;
         }
-        return false;
+        if(!veryTxms(tx)){
+            valid = false;
+        }
+        if(!veryEmail(e)){
+            valid = false;
+        }
+        return valid;
+    }
+
+
+    private boolean validNotNullAndEmpty(String str){
+        if(str == null || str.equals("")){
+            return false;
+        }
+        return true;
+    }
+
+    private String getTrim(String str){
+        return str.trim();
+    }
+
+    public Map<String, String> getError(){
+        return error;
     }
 }

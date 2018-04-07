@@ -30,34 +30,36 @@
                 <div class="inside">
                     <label for="login" class="Login">Nick name*</label>
                     <input type="text" name="login" id="login" class="validate"/>
+                    <c:out value = "${requestScope.error['nickName']}"/>
 
                 </div>
                 <div class="inside">
                     <label for="email" class="Email">E-Mail*</label>
                     <input type="email" name="email" id="email" class="validate"/>
-
+                    <c:out value = "${requestScope.error['email']}"/>
                 </div>
                 <div class="inside">
                     <label for="FName" class="FName">First name*</label>
                     <input type="text" name="FName" id="fName" class="validate"/>
-
+                    <c:out value = "${requestScope.error['name']}"/>
                 </div>
 
                 <div class="inside">
                     <label for="LName" class="LName">Last name*</label>
                     <input type="text" name="LName" id="LName" class="validate"/>
-
+                    <c:out value = "${requestScope.error['name']}"/>
                 </div>
 
                 <div class="inside">
                     <label for="password" class="Password">Password*</label>
                     <input type="password" name="password" id="password" class="validate"/>
-
+                    <c:out value = "${requestScope.error['password']}"/>
                 </div>
                 <div class="inside">
                     <label for="password2" class="Password2">Repeat password*</label>
                     <input type="password" name="password2" id="password2" class="validate"/>
-
+                    <c:out value = "${requestScope.error['password']}"/>
+                    <c:out value = "${requestScope.error['pas']}"/>
                 </div>
                 <p>
                     <button class="submit-button" type="submit">LogIn</button>

@@ -12,6 +12,7 @@ public class OutHome {
         session.removeAttribute("id");
         session.removeAttribute("role");
         session.removeAttribute("status");
+        session.removeAttribute("email");
         session.invalidate();
     }
 

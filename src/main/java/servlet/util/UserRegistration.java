@@ -24,7 +24,7 @@ public class UserRegistration {
 
     public boolean checkLoginUser(String loginUser){
         UserE user = daoUser.findUserByNickName(loginUser);
-        if(user.getNickname() != null){
+        if(user != null){
             System.out.println("TRUE");
             return valid = true;
         }

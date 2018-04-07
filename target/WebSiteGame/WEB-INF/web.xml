@@ -8,6 +8,9 @@
          version="3.1">
   <display-name>Archetype Created Web Application</display-name>
 
+    <listener>
+        <listener-class>servlet.listeners.SContextListener</listener-class>
+    </listener>
     <filter>
         <filter-name>FAuthorization</filter-name>
         <filter-class>servlet.filter.pon.al.FAuthorization</filter-class>
@@ -20,6 +23,18 @@
     <filter-mapping>
         <filter-name>FAuthorization</filter-name>
         <url-pattern>/*</url-pattern>
+    </filter-mapping>
+
+    <filter>
+        <filter-name>FSecurityGame</filter-name>
+        <filter-class>servlet.filter.pon.al.FSecurityGame</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>FSecurityGame</filter-name>
+        <url-pattern>/create</url-pattern>
+        <url-pattern>/ready</url-pattern>
+        <url-pattern>/play</url-pattern>
     </filter-mapping>
 
     <filter>

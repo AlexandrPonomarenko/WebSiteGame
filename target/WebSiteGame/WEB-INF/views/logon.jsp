@@ -36,7 +36,7 @@
                 <%--<span class="empty-message">Empty</span>--%>
                 <%--<span class="small-length-message">Small length</span>--%>
                 <%--<span class="bad-words-message">Bad words</span>--%>
-                <%--<c:out value = "${requestScope.error['login']}"/>--%>
+                <c:out value = "${requestScope.error['nickName']}"/>
             </div>
             <div class="one">
                 <label for="password">Password</label>
@@ -44,7 +44,7 @@
                 <%--<span class="empty-message">Empty</span>--%>
                 <%--<span class="small-length-message">Small length</span>--%>
                 <%--<span class="bad-words-message">Bad words</span>--%>
-                <%--<c:out value = "${requestScope.error['password']}"/>--%>
+                <c:out value = "${requestScope.error['password']}"/>
             </div>
             <div class="but">
                 <button class="submit-button" type="submit"> GO home</button>

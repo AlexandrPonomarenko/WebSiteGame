@@ -42,6 +42,7 @@
                     <li><a href="${pageContext.request.contextPath}/reportUser">Report</a></li>
                     <li><a href="${pageContext.request.contextPath}/fullreport">FullReport</a></li>
                 </c:if>
+                <li><a href="${pageContext.request.contextPath}/create">Play</a></li>
             </ul>
         </nav>
         <%--<a class="garage" href="${pageContext.request.contextPath}/yourOffice"><span class="icon-home"></span></a>--%>

@@ -16,7 +16,8 @@ public class RoleMapping {
     private static void init(){
         List<String> urlUser = new ArrayList<>();
         urlUser.add("/home");
-        urlUser.add("/games");
+        urlUser.add("/create");
+        urlUser.add("/ready");
         urlUser.add("/play");
         urlUser.add("/achievements");
         map.put(USER, urlUser);
