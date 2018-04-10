@@ -19,9 +19,12 @@
     <br>
     <br>
     <h1>PLAYYYYYYYYYYYYY</h1>
-
     <div>
-        <input type="text" id="userinput" /> <br> <input type="submit"
+        <input type="hidden" id="userName" value="${sessionScope.nickname}" />
+        <input type="hidden" id="flag" value="${requestScope.flag}" />
+    </div>
+    <div>
+        <input type="text" id="userinput" value="" /> <br> <input type="submit"
                                                          value="Send Message to Server" onclick="start()" />
     </div>
     <div id="messages"></div>
@@ -36,6 +39,8 @@
 
         webSocket.onopen = function(event) {
             onOpen(event)
+            startSendName();
+
         };
 
         webSocket.onmessage = function(event) {
@@ -43,6 +48,7 @@
         };
 
         function onMessage(event) {
+            console.log(event.data);
             document.getElementById('messages').innerHTML += '<br />'
                 + event.data;
         }
@@ -56,8 +62,16 @@
         }
 
         function start() {
-            var text = document.getElementById("userinput").value;
+            // var text = document.getElementById("userinput").value;
+            var text = document.getElementById("userName").value + ":" +"message:"+ document.getElementById("userinput").value;
+            webSocket.send(text);
+            return false;
+        }
 
+        function startSendName() {
+            var text = document.getElementById("userName").value;
+            text += ":" + document.getElementById("flag").value;
+            text += ": dru"
             webSocket.send(text);
             return false;
         }

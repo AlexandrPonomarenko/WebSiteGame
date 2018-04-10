@@ -23,7 +23,7 @@
     <div id="main">
         <div id="game">
             <form action="create" method="post">
-                <input type="hidden" name="create" value="create"/>
+                <input type="hidden" name="option" value="create"/>
                 <input type="submit" value="Create game">
             </form>
         </div>
@@ -32,6 +32,8 @@
             <form action="create", method="post">
                 <c:forEach items="${requestScope.list}" var="item">
                     <p>${item.name}</p>
+                    <input type="hidden" name="option" value="${item.name}"/>
+                    <input type="submit" value="Connect game">
 
                 </c:forEach>
             </form>

@@ -15,9 +15,9 @@ import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        List<Object> userEntitylist = null;
-        SessionFactory sessionFactory =
-                HibernateUtil.buildSessionFactory();
+//        List<Object> userEntitylist = null;
+//        SessionFactory sessionFactory =
+//                HibernateUtil.buildSessionFactory();
 //        Session session = sessionFactory.openSession();
 //        Transaction tx;
         try{
@@ -106,15 +106,16 @@ public class Main {
 //            System.out.println("- " + randomGen() + " -");
 //            All();
 //            addGame();
-            AllUsers();
+//            AllUsers();
 //            tx.commit();
+            e("Alex:create");
         }catch (Exception e){
             e.printStackTrace();
             System.out.println(e.getMessage());
 //            session.beginTransaction().rollback();
         }finally {
 //            session.close();
-            HibernateUtil.shutdown();
+//            HibernateUtil.shutdown();
             System.out.println("CLOSE SessionFactory");
         }
     }
@@ -266,5 +267,15 @@ public class Main {
 
         }
 
+    }
+
+    public static void e(String str){
+        String[] d = new String[3];
+        System.out.println(d.length + " eeeeee");
+        d = str.split(":");
+        System.out.println(d.length);
+        for (int i = 0; i < d.length; i++){
+            System.out.println(d[i]);
+        }
     }
 }

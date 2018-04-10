@@ -10,8 +10,10 @@
 /home/alex/www/WebSiteGame/src/main/java/servlet/controller/pon/al/SConfirm.java
 /home/alex/www/WebSiteGame/src/main/java/game/pon/al/WebSocketServer.java
 /home/alex/www/WebSiteGame/src/main/java/servlet/util/UserRegistration.java
+/home/alex/www/WebSiteGame/src/main/java/game/pon/al/Client.java
 /home/alex/www/WebSiteGame/src/main/java/servlet/controller/pon/al/SMore.java
 /home/alex/www/WebSiteGame/src/main/java/servlet/controller/pon/al/SReady.java
+/home/alex/www/WebSiteGame/src/main/java/game/pon/al/UtilGame.java
 /home/alex/www/WebSiteGame/src/main/java/servlet/util/HelpAdMg.java
 /home/alex/www/WebSiteGame/src/main/java/servlet/controller/pon/al/SFromAdMg.java
 /home/alex/www/WebSiteGame/src/main/java/servlet/util/ReportUser.java

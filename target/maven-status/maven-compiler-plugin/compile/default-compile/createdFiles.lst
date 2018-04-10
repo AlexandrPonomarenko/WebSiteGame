@@ -19,6 +19,7 @@ servlet/util/CheckURLRole.class
 hibernate/pon/al/entity/GameStatE.class
 util/pon/al/Email$1.class
 servlet/controller/pon/al/Slogin.class
+game/pon/al/Client.class
 servlet/util/ReportUser.class
 servlet/util/HistoryGame.class
 servlet/controller/pon/al/SCreateGame.class
@@ -28,6 +29,7 @@ game/pon/al/WebSocketServer.class
 servlet/controller/pon/al/SHome.class
 servlet/filter/pon/al/FAuthorization.class
 dao/pon/al/user/DaoUser.class
+game/pon/al/UtilGame.class
 servlet/controller/pon/al/SAll.class
 game/pon/al/SinglCollectGame.class
 servlet/error/CheckErrorFilds.class

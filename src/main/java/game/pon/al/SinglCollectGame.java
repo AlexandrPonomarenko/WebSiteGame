@@ -21,4 +21,26 @@ public final class SinglCollectGame {
     public List<Game> getGames(){
         return listGame;
     }
+
+    public Game getByNickName(String nickNameOpponent){
+        synchronized (listGame) {
+            for (Game game : listGame) {
+                if (game.getName().equals(nickNameOpponent)) {
+                    return game;
+                }
+            }
+            return null;
+        }
+    }
+
+    public void removeGameByNickName(String nickname){
+        synchronized (listGame) {
+            for (Game game : listGame) {
+                if (game.getName().equals(nickname)) {
+                    listGame.remove(game);
+                    return;
+                }
+            }
+        }
+    }
 }

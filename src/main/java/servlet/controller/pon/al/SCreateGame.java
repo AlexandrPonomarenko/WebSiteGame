@@ -18,12 +18,19 @@ public class SCreateGame extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         util = new SUtil();
         Game game;
-        System.out.println("CREATEEEEEEEEE " + request.getParameter("create"));
-        if(request.getParameter("create").equals("create")){
+        System.out.println("CREATEEEEEEEEE " + request.getParameter("option"));
+        if(request.getParameter("option").equals("create")){
             game = new Game((String) util.getSession(request).getAttribute("nickname"));
             game.setStatus(true);
             SinglCollectGame.getInstance().getGames().add(game);
             System.out.println("TU TU TU TU TU T UT UTU TU UT UT UT UTU TU");
+            response.sendRedirect(request.getContextPath() + "/play");
+        }else if(!request.getParameter("option").equals("create")){
+            if(SinglCollectGame.getInstance().getByNickName(request.getParameter("option")) != null){
+                System.out.println("SET ATTRIBUTE CONNECT " + request.getParameter("option"));
+                util.getSession(request).setAttribute("connect", request.getParameter("option"));
+                SinglCollectGame.getInstance().removeGameByNickName(request.getParameter("option"));
+            }
             response.sendRedirect(request.getContextPath() + "/play");
         }
     }
