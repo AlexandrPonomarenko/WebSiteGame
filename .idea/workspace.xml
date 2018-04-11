@@ -7,23 +7,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f5f2e367-fec7-4fe0-8ecd-1e15e940c0bc" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/WebSiteGame_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/WebSiteGame_war_exploded.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/pon/al/Game.java" afterPath="$PROJECT_DIR$/src/main/java/game/pon/al/Game.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/game/pon/al/SinglCollectGame.java" afterPath="$PROJECT_DIR$/src/main/java/game/pon/al/SinglCollectGame.java" />
+      <change beforePath="$PROJECT_DIR$/WebSiteGame.iml" afterPath="$PROJECT_DIR$/WebSiteGame.iml" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/game/pon/al/UtilGame.java" afterPath="$PROJECT_DIR$/src/main/java/game/pon/al/UtilGame.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/game/pon/al/WebSocketServer.java" afterPath="$PROJECT_DIR$/src/main/java/game/pon/al/WebSocketServer.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hibernate/pon/al/util/Main.java" afterPath="$PROJECT_DIR$/src/main/java/hibernate/pon/al/util/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SCreateGame.java" afterPath="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SCreateGame.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SPlay.java" afterPath="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SPlay.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/games.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/games.jsp" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/play.jsp" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/play.jsp" />
       <change beforePath="$PROJECT_DIR$/target/WebSiteGame.war" afterPath="$PROJECT_DIR$/target/WebSiteGame.war" />
       <change beforePath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/hibernate/pon/al/util/Main.class" afterPath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/classes/hibernate/pon/al/util/Main.class" />
-      <change beforePath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/views/games.jsp" afterPath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/views/games.jsp" />
       <change beforePath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/views/play.jsp" afterPath="$PROJECT_DIR$/target/WebSiteGame/WEB-INF/views/play.jsp" />
       <change beforePath="$PROJECT_DIR$/target/classes/hibernate/pon/al/util/Main.class" afterPath="$PROJECT_DIR$/target/classes/hibernate/pon/al/util/Main.class" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -122,7 +118,7 @@
       <file leaf-file-name="SCreateGame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SCreateGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
+            <state relative-caret-position="0">
               <caret line="31" column="67" lean-forward="false" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="67" />
               <folding />
             </state>
@@ -142,22 +138,9 @@
       <file leaf-file-name="play.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/play.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="66" column="33" lean-forward="false" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
+            <state relative-caret-position="320">
+              <caret line="76" column="47" lean-forward="true" selection-start-line="76" selection-start-column="47" selection-end-line="76" selection-end-column="47" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SinglCollectGame.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/game/pon/al/SinglCollectGame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="35" column="52" lean-forward="false" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="52" />
-              <folding>
-                <element signature="e#538#539#0" expanded="true" />
-                <element signature="e#569#570#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -165,8 +148,8 @@
       <file leaf-file-name="Client.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/game/pon/al/Client.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="698">
-              <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+            <state relative-caret-position="284">
+              <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding>
                 <element signature="e#353#354#0" expanded="true" />
                 <element signature="e#388#389#0" expanded="true" />
@@ -186,7 +169,6 @@
                 <element signature="e#970#971#0" expanded="true" />
                 <element signature="e#1005#1006#0" expanded="true" />
                 <element signature="e#1043#1044#0" expanded="true" />
-                <element signature="e#1086#1087#0" expanded="true" />
                 <element signature="e#1132#1133#0" expanded="true" />
               </folding>
             </state>
@@ -221,12 +203,12 @@
       <file leaf-file-name="WebSocketServer.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/game/pon/al/WebSocketServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="90" column="37" lean-forward="true" selection-start-line="90" selection-start-column="37" selection-end-line="90" selection-end-column="37" />
+            <state relative-caret-position="271">
+              <caret line="106" column="9" lean-forward="true" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#2367#2368#0" expanded="true" />
-                <element signature="e#2421#2422#0" expanded="true" />
+                <element signature="e#2730#2731#0" expanded="true" />
+                <element signature="e#2784#2785#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -235,12 +217,12 @@
       <file leaf-file-name="UtilGame.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/game/pon/al/UtilGame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="97" column="35" lean-forward="false" selection-start-line="97" selection-start-column="19" selection-end-line="97" selection-end-column="35" />
+            <state relative-caret-position="-432">
+              <caret line="63" column="18" lean-forward="false" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1297#1298#0" expanded="true" />
-                <element signature="e#1334#1335#0" expanded="true" />
+                <element signature="e#1325#1326#0" expanded="true" />
+                <element signature="e#1362#1363#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -257,6 +239,13 @@
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>buildJsonObjectAdd</find>
+      <find>buildJsonObjectCreate</find>
+      <find>buildJsonObjectMessage</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -308,18 +297,18 @@
         <option value="$PROJECT_DIR$/src/main/java/servlet/util/RoleMapping.java" />
         <option value="$PROJECT_DIR$/src/main/java/servlet/listeners/SContextListener.java" />
         <option value="$PROJECT_DIR$/src/main/java/servlet/util/CheckSecurityGames.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/servlet/filter/pon/al/FSecurityGame.java" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/games.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/game/pon/al/Game.java" />
         <option value="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SPlay.java" />
-        <option value="$PROJECT_DIR$/src/main/java/hibernate/pon/al/util/Main.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/play.jsp" />
         <option value="$PROJECT_DIR$/src/main/java/game/pon/al/Client.java" />
         <option value="$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SCreateGame.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/pon/al/SinglCollectGame.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/hibernate/pon/al/util/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/pon/al/UtilGame.java" />
         <option value="$PROJECT_DIR$/src/main/java/game/pon/al/WebSocketServer.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/play.jsp" />
       </list>
     </option>
   </component>
@@ -358,10 +347,10 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1601" />
-    <option name="y" value="199" />
-    <option name="width" value="779" />
-    <option name="height" value="604" />
+    <option name="x" value="1480" />
+    <option name="y" value="121" />
+    <option name="width" value="1327" />
+    <option name="height" value="780" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -379,8 +368,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -420,6 +411,15 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="al" type="462c0819:PsiDirectoryNode" />
+              <item name="util" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WebSiteGame" type="b2602c69:ProjectViewProjectNode" />
+              <item name="WebSiteGame" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="servlet" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -444,14 +444,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="head" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="WebSiteGame" type="b2602c69:ProjectViewProjectNode" />
-              <item name="WebSiteGame" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
               <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -467,8 +459,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -823,11 +813,12 @@
       <workItem from="1523004777629" duration="19027000" />
       <workItem from="1523262491859" duration="18037000" />
       <workItem from="1523351440079" duration="28544000" />
+      <workItem from="1523439688360" duration="29814000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="436710000" />
+    <option name="totallyTimeSpent" value="466524000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -839,7 +830,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1601" y="199" width="1327" height="780" extended-state="6" />
+    <frame x="1480" y="121" width="1327" height="780" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26666668" sideWeight="0.365129" order="8" side_tool="true" content_ui="tabs" />
@@ -860,10 +851,9 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16951789" sideWeight="0.634871" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994527" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23455825" sideWeight="0.17943925" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17513682" sideWeight="1.0" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17826428" sideWeight="1.0" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2236122" sideWeight="1.0" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -873,6 +863,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32994527" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32868218" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1141,14 +1132,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="139" column="28" lean-forward="false" selection-start-line="139" selection-start-column="28" selection-end-line="139" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/help.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1194,51 +1177,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/play.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="66" column="33" lean-forward="false" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/pon/al/util/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="110" column="29" lean-forward="false" selection-start-line="110" selection-start-column="29" selection-end-line="110" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/game/pon/al/Client.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="698">
-          <caret line="53" column="0" lean-forward="false" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding>
-            <element signature="e#353#354#0" expanded="true" />
-            <element signature="e#388#389#0" expanded="true" />
-            <element signature="e#444#445#0" expanded="true" />
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#527#528#0" expanded="true" />
-            <element signature="e#557#558#0" expanded="true" />
-            <element signature="e#604#605#0" expanded="true" />
-            <element signature="e#642#643#0" expanded="true" />
-            <element signature="e#685#686#0" expanded="true" />
-            <element signature="e#723#724#0" expanded="true" />
-            <element signature="e#786#787#0" expanded="true" />
-            <element signature="e#840#841#0" expanded="true" />
-            <element signature="e#871#872#0" expanded="true" />
-            <element signature="e#898#899#0" expanded="true" />
-            <element signature="e#938#939#0" expanded="true" />
-            <element signature="e#970#971#0" expanded="true" />
-            <element signature="e#1005#1006#0" expanded="true" />
-            <element signature="e#1043#1044#0" expanded="true" />
-            <element signature="e#1086#1087#0" expanded="true" />
-            <element signature="e#1132#1133#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/pon/al/Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="54">
@@ -1272,43 +1210,95 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/servlet/controller/pon/al/SCreateGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
+        <state relative-caret-position="0">
           <caret line="31" column="67" lean-forward="false" selection-start-line="31" selection-start-column="47" selection-end-line="31" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="148" column="0" lean-forward="false" selection-start-line="148" selection-start-column="0" selection-end-line="148" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/pon/al/SinglCollectGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="35" column="52" lean-forward="false" selection-start-line="35" selection-start-column="44" selection-end-line="35" selection-end-column="52" />
+        <state relative-caret-position="306">
+          <caret line="36" column="33" lean-forward="true" selection-start-line="36" selection-start-column="33" selection-end-line="36" selection-end-column="33" />
           <folding>
-            <element signature="e#538#539#0" expanded="true" />
-            <element signature="e#569#570#0" expanded="true" />
+            <element signature="e#538#539#0" expanded="false" />
+            <element signature="e#569#570#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/hibernate/pon/al/util/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="302">
+          <caret line="168" column="37" lean-forward="false" selection-start-line="168" selection-start-column="37" selection-end-line="168" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/game/pon/al/Client.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="284">
+          <caret line="51" column="0" lean-forward="false" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding>
+            <element signature="e#353#354#0" expanded="true" />
+            <element signature="e#388#389#0" expanded="true" />
+            <element signature="e#444#445#0" expanded="true" />
+            <element signature="e#492#493#0" expanded="true" />
+            <element signature="e#527#528#0" expanded="true" />
+            <element signature="e#557#558#0" expanded="true" />
+            <element signature="e#604#605#0" expanded="true" />
+            <element signature="e#642#643#0" expanded="true" />
+            <element signature="e#685#686#0" expanded="true" />
+            <element signature="e#723#724#0" expanded="true" />
+            <element signature="e#786#787#0" expanded="true" />
+            <element signature="e#840#841#0" expanded="true" />
+            <element signature="e#871#872#0" expanded="true" />
+            <element signature="e#898#899#0" expanded="true" />
+            <element signature="e#938#939#0" expanded="true" />
+            <element signature="e#970#971#0" expanded="true" />
+            <element signature="e#1005#1006#0" expanded="true" />
+            <element signature="e#1043#1044#0" expanded="true" />
+            <element signature="e#1132#1133#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/pon/al/UtilGame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="97" column="35" lean-forward="false" selection-start-line="97" selection-start-column="19" selection-end-line="97" selection-end-column="35" />
+        <state relative-caret-position="-432">
+          <caret line="63" column="18" lean-forward="false" selection-start-line="63" selection-start-column="18" selection-end-line="63" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1297#1298#0" expanded="true" />
-            <element signature="e#1334#1335#0" expanded="true" />
+            <element signature="e#1325#1326#0" expanded="true" />
+            <element signature="e#1362#1363#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/views/play.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="76" column="47" lean-forward="true" selection-start-line="76" selection-start-column="47" selection-end-line="76" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/game/pon/al/WebSocketServer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="90" column="37" lean-forward="true" selection-start-line="90" selection-start-column="37" selection-end-line="90" selection-end-column="37" />
+        <state relative-caret-position="271">
+          <caret line="106" column="9" lean-forward="true" selection-start-line="106" selection-start-column="9" selection-end-line="106" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#2367#2368#0" expanded="true" />
-            <element signature="e#2421#2422#0" expanded="true" />
+            <element signature="e#2730#2731#0" expanded="true" />
+            <element signature="e#2784#2785#0" expanded="true" />
           </folding>
         </state>
       </provider>

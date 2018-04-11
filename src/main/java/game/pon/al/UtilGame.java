@@ -1,6 +1,7 @@
 package game.pon.al;
 
 import javax.websocket.Session;
+import java.io.IOException;
 import java.util.List;
 
 public class UtilGame {
@@ -88,18 +89,51 @@ public class UtilGame {
         return false;
     }
 
-//    public boolean cleaningCollection(String id, List<Client> list){
-//        if(getUserBySessionId(id, list) != null){
-//            Client client = getUserBySessionId(id, list);
-//
-//        }
-//    }
+    public boolean checkOnlyUser(Client client){
+        if(checkUserByNull(client)){
+            return true;
+        }
+        return false;
+    }
 
     public boolean getFindSessionId(String id, Client client){
         if(client.getSessionId().equals(id)){
             return true;
         }
         return false;
+    }
+
+    public void createGame(String name, Session session){
+        Client client = new Client(name, session);
+        WebSocketServer.listPlayers.add(client);
+    }
+
+    public void addPlayer(String nameCreatorPlayer, String nameAddPlayer, List<Client> list, Session session){
+        Client client;
+        client = getAddPlayers(nameCreatorPlayer, list);
+        client.setNameOpponent(nameAddPlayer);
+        client.setSessionOpponent(session);
+    }
+
+    public void fromSomebodyUser(String sessionId, List<Client> list, String player, String message){
+        Client client;
+        boolean flag;
+        client = getUserBySessionId(sessionId, list);
+        if(checkUserName(client.getName(), player)){
+//
+//            try {
+//                client.getSessionOpponent().getBasicRemote().sendText("NAKONETSTO it is from " + client.getName()+ " "+ message);
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+        }else{
+//            try {
+//                client.getSession().getBasicRemote().sendText("NAKONETSTO it is from " + client.getNameOpponent() + " "+ message);
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
+        }
+
     }
 
 }

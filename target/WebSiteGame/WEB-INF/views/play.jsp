@@ -33,13 +33,18 @@
         var webSocket = new WebSocket(
             'ws://localhost:8080/WebSiteGame/play');
 
+        var name = document.getElementById("userName").value;
+        var flag = document.getElementById("flag").value;
+
         webSocket.onerror = function(event) {
+            console.log(event.data);
             onError(event)
         };
 
         webSocket.onopen = function(event) {
-            onOpen(event)
-            startSendName();
+            onOpen(event);
+            startSendMes()
+            // startSendName();
 
         };
 
@@ -48,9 +53,34 @@
         };
 
         function onMessage(event) {
-            console.log(event.data);
-            document.getElementById('messages').innerHTML += '<br />'
-                + event.data;
+            var container,
+                nameNode,
+                messageNode,
+                data = event.data;
+
+            try {
+                data = JSON.parse(data);
+            } catch (e) {
+                data = {"name": name, "message": "Dad data" };
+            }
+
+            console.log(data);
+
+            container = document.createElement('div');
+            nameNode = document.createElement('span');
+            messageNode = document.createElement('span');
+
+            nameNode.innerHTML = data.name + ": ";
+            messageNode.innerHTML = data.message;
+
+            container.appendChild(nameNode);
+            container.appendChild(messageNode);
+
+            document.getElementById('messages').appendChild(container);
+
+            // console.log(event.data);
+            // document.getElementById('messages').innerHTML += '<br />'
+            //     + event.data;
         }
 
         function onOpen(event) {
@@ -63,7 +93,9 @@
 
         function start() {
             // var text = document.getElementById("userinput").value;
-            var text = document.getElementById("userName").value + ":" +"message:"+ document.getElementById("userinput").value;
+            // var text = document.getElementById("userName").value + ":" +"message:"+ document.getElementById("userinput").value;
+            // var text = buildJsonObjectMessage(document.getElementById("userName").value, "message", document.getElementById("userinput").value);
+            var text = createData("message", document.getElementById("userinput").value);
             webSocket.send(text);
             return false;
         }
@@ -71,9 +103,57 @@
         function startSendName() {
             var text = document.getElementById("userName").value;
             text += ":" + document.getElementById("flag").value;
-            text += ": dru"
+            text += ": dru";
             webSocket.send(text);
             return false;
+        }
+
+        function startSendMes() {
+            var text;
+            if(document.getElementById("flag").value === "create"){
+                // text = buildJsonObjectCreate(document.getElementById("userName").value, "create");
+                text = createData("create");
+            }else{
+                // text = buildJsonObjectAdd(document.getElementById("userName").value, "add", document.getElementById("flag").value, "-");
+                text = createData("add", "-");
+            }
+            // var text = buildJsonObjectAdd(document.getElementById("userName").value, "add", document.getElementById("flag").value, "-");
+            webSocket.send(text);
+        }
+
+        // function buildJsonObjectAdd(name, type, flag, message) {
+        //     var obj = {"name":name,
+        //                 "type":type,
+        //                 "add":flag,
+        //                 "message": message};
+        //     return JSON.stringify(obj);
+        // }
+        //
+        // function buildJsonObjectCreate(name, type) {
+        //     var obj = {"name":name,
+        //                 "type":type
+        //                 };
+        //     return JSON.stringify(obj);
+        // }
+        //
+        // function buildJsonObjectMessage(name, type, message) {
+        //     var obj = {"name":name,
+        //                 "type":type,
+        //                 "message":message
+        //     };
+        //     return JSON.stringify(obj);
+        // }
+
+        function createData (type, message) {
+            if (!type) { type = null; }
+            if (!message) { message = null; }
+
+            return JSON.stringify({
+                "name": name,
+                "type": type,
+                "message": message,
+                "add": flag
+            });
         }
     </script>
 </body>

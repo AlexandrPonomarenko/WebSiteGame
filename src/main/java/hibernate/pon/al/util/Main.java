@@ -7,6 +7,10 @@ import hibernate.pon.al.entity.GameStatE;
 import hibernate.pon.al.entity.RoleE;
 import hibernate.pon.al.entity.UserE;
 import org.hibernate.*;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.JSONValue;
+import org.json.simple.parser.ParseException;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -108,7 +112,9 @@ public class Main {
 //            addGame();
 //            AllUsers();
 //            tx.commit();
-            e("Alex:create");
+//            e("Alex:create");
+            System.out.println(buildJson() + "START");
+            parseJson(buildJson());
         }catch (Exception e){
             e.printStackTrace();
             System.out.println(e.getMessage());
@@ -148,6 +154,34 @@ public class Main {
         daoRole.update(role);
 //        daoUser.create(userE);
 //        daoGameStat.create(gameStatE);
+
+    }
+
+    public static String buildJson(){
+        JSONObject object = new JSONObject();
+        JSONArray array = new JSONArray();
+        JSONObject object1 = new JSONObject();
+        object1.put("message", "HELLO");
+        array.add(object1);
+        object.put("name", " Alex");
+        object.put("type", array);
+        object.put("sex","man");
+        return object.toJSONString();
+    }
+
+    public static void parseJson(String json){
+        try {
+                JSONObject object = (JSONObject)JSONValue.parseWithException(json);
+            System.out.println(object.get("name") + " -- " + object.get("sex"));
+            System.out.println("TO STRING " + object.toJSONString());
+            JSONArray array = (JSONArray)object.get("type");
+            for (int i =0; i < array.size(); i++){
+                System.out.println(array.get(i).toString() + " ++ ");
+            }
+
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
 
     }
 
