@@ -32,7 +32,7 @@
         <form method="POST" action="logon">
             <div class="one">
                 <label for="login">Nick name</label>
-                <input type="text" name="login" id="login" class="validate"/>
+                <input type="text" name="login" id="login" class="validate" value="Alexxxx"/>
                 <%--<span class="empty-message">Empty</span>--%>
                 <%--<span class="small-length-message">Small length</span>--%>
                 <%--<span class="bad-words-message">Bad words</span>--%>
@@ -40,7 +40,7 @@
             </div>
             <div class="one">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" class="validate"/>
+                <input type="password" name="password" id="password" class="validate" value="23ATDHFkz$"/>
                 <%--<span class="empty-message">Empty</span>--%>
                 <%--<span class="small-length-message">Small length</span>--%>
                 <%--<span class="bad-words-message">Bad words</span>--%>

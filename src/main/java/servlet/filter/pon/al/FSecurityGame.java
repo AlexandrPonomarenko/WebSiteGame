@@ -43,7 +43,7 @@ public class FSecurityGame implements Filter {
     public void init(FilterConfig config) throws ServletException {
         fc = config;
         csg = new CheckSecurityGames();
-        System.out.println("FSecurityGame : INIT");
+//        System.out.println("FSecurityGame : INIT");
     }
 
 }

@@ -1,15 +1,22 @@
 package game.pon.al;
 import javax.websocket.Session;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Client {
     private String name;
     private String nameOpponent;
     private Session session;
     private Session sessionOpponent;
+    private int steps;
+    private Map<String, String> mapGame;
 
     public Client (String name, Session session) {
         this.name = name;
         this.session = session;
+        steps = 0;
+        mapGame = new HashMap<>();
+        setKeyMap();
     }
 
     public String getNameOpponent() {
@@ -52,5 +59,31 @@ public class Client {
         return sessionOpponent.getId();
     }
 
+    public void setSteps(int steps) {
+        this.steps = steps;
+    }
 
+    public int getSteps() {
+        return steps;
+    }
+
+    public Map<String, String> getMapGame() {
+        return mapGame;
+    }
+
+    public void setMapGame(Map<String, String> mapGame) {
+        this.mapGame = mapGame;
+    }
+
+    private void setKeyMap(){
+        mapGame.put("lt","");
+        mapGame.put("lm","");
+        mapGame.put("lb","");
+        mapGame.put("mt","");
+        mapGame.put("mm","");
+        mapGame.put("mb","");
+        mapGame.put("rt","");
+        mapGame.put("rm","");
+        mapGame.put("rb","");
+    }
 }

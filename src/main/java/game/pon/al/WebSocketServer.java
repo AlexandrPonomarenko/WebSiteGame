@@ -12,6 +12,13 @@ import java.util.*;
 @ServerEndpoint("/play")
 public class WebSocketServer {
     static List<Client> listPlayers = Collections.synchronizedList(new ArrayList<Client>());
+    private final String  infoWarning = "You can not send messages without a second player.";
+    private final String  infoConnect = "To you it was connected ";
+    private final String  warningStep = "Now is not your move.";
+    private final String  vin = "Congratulations! You won !!!";
+    private final String  lose = "You lost .... again?";
+    private final String  draw = "This is a draw, I hope in the next game someone of you will smile good luck.";
+    private final String  cellTaken = ", this cell is already taken.";
     private UtilGame utilGame = new UtilGame();
     private Client client;
     private String [] splitArray;
@@ -67,12 +74,26 @@ public class WebSocketServer {
             SinglCollectGame.getInstance().removeGameByNickName(client.getName());
             removeUser(session.getId());
         }else{
+            System.out.println("IN THE METHOD VIHODA PERED BLOKOM IF");
             if(utilGame.getUserBySessionId(session.getId(), listPlayers) != null) {
+                System.out.println("IN THE BLOC");
                 client = utilGame.getUserBySessionId(session.getId(), listPlayers);
                 if(utilGame.getFindSessionId(session.getId(), client)){
+                    System.out.println("TRUE");
                     sendUserOut(client, true);
+                    System.out.println("TRUE ++++++++++++++++++++++++++++++++++++++++++++++++");
+                    if(utilGame.checkGetOutLast(client)){
+                        System.out.println("2 FIRST CLOSE");
+                        removeUser(session.getId());
+                    }
                 }else{
+                    System.out.println("FALSE");
                     sendUserOut(client, false);
+                    System.out.println("FALSE -----------------------------------------------");
+                    if(utilGame.checkGetOutLast(client)){
+                        System.out.println("2 SECOND CLOSE");
+                        removeUser(session.getId());
+                    }
                 }
             }
         }
@@ -82,9 +103,9 @@ public class WebSocketServer {
     private void removeUser(String sesId){
         synchronized (listPlayers) {
             for (Client client : listPlayers) {
-                if (client.getSessionId().equals(sesId)) {
+                if (client.getSessionId().equals(sesId) || client.getOpponentSessionId().equals(sesId)) {
                     listPlayers.remove(client);
-                    System.out.println("DELETE USER");
+                    System.out.println("DELETE USER " + listPlayers.size());
                     return;
                 }
             }
@@ -95,10 +116,11 @@ public class WebSocketServer {
         if(flag){
             try {
                 if(client.getSessionOpponent().isOpen()) {
+                    System.out.println(client.getSession().isOpen() + " 11111TRUE");
 //                    client.getSessionOpponent().getBasicRemote().sendText("Your opponent " + client.getName() + "get out");
                     client.getSessionOpponent().getBasicRemote().sendText(toJson(client.getName(),"Your opponent get out"));
                     System.out.println(client.getName() + "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-                    client.getSessionOpponent().close();
+//                    client.getSessionOpponent().close();
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -106,11 +128,12 @@ public class WebSocketServer {
 
         }else{
             try {
-                if(client.getSessionOpponent().isOpen()) {
+                if(client.getSession().isOpen()) {
+                    System.out.println(client.getSessionOpponent().isOpen() + " 0000000000FALSE");
 //                    client.getSession().getBasicRemote().sendText("Your opponent " + client.getNameOpponent() + "get out");
                     client.getSession().getBasicRemote().sendText(toJson(client.getNameOpponent(),"Your opponent get out"));
                     System.out.println(client.getNameOpponent() + "@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
-                    client.getSession().close();
+//                    client.getSession().close();
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -120,21 +143,60 @@ public class WebSocketServer {
 
     private void sendOnlyUserMessage(Client client){
         try {
-            client.getSession().getBasicRemote().sendText(toJson("SERVER", "You can not send messages without a second player."));
+            client.getSession().getBasicRemote().sendText(toJson("SERVER", infoWarning));
         } catch (IOException e) {
             System.out.println("BEDA V METODE sendOnlyUserMessage");
             e.printStackTrace();
         }
     }
 
-    private String toJson(String name, String m){
+//    private void sendInfoMessage(Client client, String message){
+//        try {
+//            client.getSession().getBasicRemote().sendText((String) toJson("SERVER", message + client.getNameOpponent()));
+//            client.getSessionOpponent().getBasicRemote().sendText((String) toJson("SERVER", message.substring(2,message.length()) + client.getName()));
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
+
+    private void sendInfoMessage(Client client, String message){
+        try {
+            client.getSession().getBasicRemote().sendText(toJsonSend("SERVER", message + client.getNameOpponent(),"-","x"));
+            client.getSessionOpponent().getBasicRemote().sendText(toJsonSend("SERVER", message.substring(2,message.length()) + client.getName(),"-","o"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void sendWarningMove(Session session){
+        try {
+            session.getBasicRemote().sendText(toJson("SERVER",warningStep));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    private String toJson(String name, String mes){
         JSONObject jsonObject = new JSONObject();
         jsonObject.put("name", name);
         jsonObject.put("type", "message");
-        jsonObject.put("message", m);
+        jsonObject.put("message", mes);
         System.out.println(" IN METHOD toJson " + jsonObject.toString());
         return jsonObject.toJSONString();
     }
+
+    private String toJsonSend(String name, String mes, String value, String step){
+        JSONObject jsonObject = new JSONObject();
+        jsonObject.put("name", name);
+        jsonObject.put("type", "message");
+        jsonObject.put("message", mes);
+        jsonObject.put("value", value);
+        jsonObject.put("step", step);
+        System.out.println(" IN METHOD toJsonSend " + jsonObject.toString());
+        return jsonObject.toJSONString();
+    }
+
+
 
     private JSONObject parseToString(String s){
         JSONObject object;
@@ -153,26 +215,33 @@ public class WebSocketServer {
                     System.out.println("IN MESSAGE");
                     if(!utilGame.cleaning(session.getId(),listPlayers)){
                         client = utilGame.getUserBySessionId(session.getId(), listPlayers);
-//                    if(!utilGame.checkOnlyUser(client)) {
-                        if (utilGame.checkUserName(client.getName(), (String) jsonObject.get("name"))) {
-                            client.getSessionOpponent().getBasicRemote().sendText(toJson(client.getName(), (String) jsonObject.get("message")));
-                        } else {
-                            client.getSession().getBasicRemote().sendText(toJson(client.getNameOpponent(), (String) jsonObject.get("message")));
+                        if(utilGame.checkRoleSteps(client,(String) jsonObject.get("name"))) {
+                            controlMessage(controlStep(client, (String) jsonObject.get("message"), (String)jsonObject.get("value")), (String) jsonObject.get("name"), (String) jsonObject.get("message"), (String)jsonObject.get("value"));
+//                            if (utilGame.checkUserName(client.getName(), (String) jsonObject.get("name"))) {
+//                                client.getSessionOpponent().getBasicRemote().sendText(toJson(client.getName(), (String) jsonObject.get("message")));
+//                            } else {
+//                                client.getSession().getBasicRemote().sendText(toJson(client.getNameOpponent(), (String) jsonObject.get("message")));
+//                            }
+                        }else{
+                            sendWarningMove(session);
+                            return;
                         }
                     }else{
                         sendOnlyUserMessage(utilGame.getCreatorUserBySessionId(session.getId(),listPlayers));
                     }
                     break;
                 case "create":
-                    System.out.println("IN CREATE");
+                    System.out.println(" BEFORE ADD IN COLLECTION IN CREATE " + listPlayers.size());
                     System.out.println(jsonObject.get("name"));
                     utilGame.createGame((String)jsonObject.get("name"), session);
+                    System.out.println(" AFTER ADD IN COLLECTION IN CREATE " + listPlayers.size());
                     break;
                 case "add":
                     System.out.println("IN ADD");
                     System.out.println(listPlayers.size() + " AAAAAAAAAAAAAAAAAAAAAAAAAA");
                     System.out.println("ADD NAME " + jsonObject.get("add") + " --- MY NAME " + jsonObject.get("name"));
-                    utilGame.addPlayer((String) jsonObject.get("add"), (String)jsonObject.get("name"), listPlayers, session);
+                    client = utilGame.addPlayer((String) jsonObject.get("add"), (String)jsonObject.get("name"), listPlayers, session);
+                    sendInfoMessage(client, infoConnect);
                     break;
                 case "out":
                     System.out.println("OUT");
@@ -181,6 +250,82 @@ public class WebSocketServer {
                     System.out.println("ERROR");
                     break;
             }
+        }
+    }
+//1 аргумент примает контрольное слово, 2- Имя которое пришло от клиента, 3 - сообщение от клиента(ключ), 4 -от клиента значение ключа(х или о)
+    private void controlMessage(String controlWord, String nameJsonObject, String jsonObjectMessage, String value){
+        if(controlWord.equals("step")){
+            sendStep(nameJsonObject, jsonObjectMessage, value);
+        }else if(controlWord.equals("noStep")){
+            sendNotificationMes(controlWord, nameJsonObject, jsonObjectMessage, value);
+        }else if(controlWord.equals("between")){
+            sendNotificationMes(controlWord, nameJsonObject, jsonObjectMessage, value);
+        }else if(controlWord.equals("vin")){
+            sendNotificationMes(controlWord, nameJsonObject, jsonObjectMessage, value);
+        }
+    }
+    private String controlStep(Client client, String key, String value){
+        if(!utilGame.checkAllMapGameIsEmpty(client)){
+            if(utilGame.checkValueForKeyMapGame(client, key)){
+                utilGame.setValueMapGame(client, key, value);
+                if(!utilGame.checkAllMapGameIsEmpty(client)) {
+                    if (!utilGame.checkAllStepLine(client, key, value)) {
+                        return "step";
+                    } else {
+                        return "vin";
+                    }
+                }else{return "between";}
+            }else{
+                utilGame.incrementStep(client);
+                return "noStep";
+            }
+        }else {
+            return "between";
+        }
+    }
+
+    private void sendStep(String nameJsonObject, String message, String value){
+        if (utilGame.checkUserName(client.getName(), nameJsonObject)) {
+            try {
+                client.getSessionOpponent().getBasicRemote().sendText(toJsonSend("Answer Server: " + client.getName(),message,value,"-"));
+                client.getSession().getBasicRemote().sendText(toJsonSend("SERVER", "step", "-","-"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        } else {
+            try {
+                client.getSession().getBasicRemote().sendText(toJsonSend("Answer Server: " + client.getNameOpponent(),message,value,"-"));
+                client.getSessionOpponent().getBasicRemote().sendText(toJsonSend("SERVER", "step", "-","-"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private void sendNotificationMes(String control, String nameClient, String key, String value){
+        try {
+            if (control.equals("noStep")) {
+                if (utilGame.checkUserName(client.getName(), nameClient)) {
+                    client.getSession().getBasicRemote().sendText(toJsonSend("SERVER: " + client.getName(), cellTaken, "-", "-"));
+                } else {
+                    client.getSessionOpponent().getBasicRemote().sendText(toJsonSend("SERVER: " + client.getNameOpponent(), cellTaken, "-", "-"));
+                }
+            } else if (control.equals("between")) {
+                client.getSession().getBasicRemote().sendText(toJsonSend("SERVER: ", draw, "between", "-"));
+                client.getSessionOpponent().getBasicRemote().sendText(toJsonSend("SERVER: ", draw, "between", "-"));
+            } else if (control.equals("vin")) {
+                if (utilGame.checkUserName(client.getName(), nameClient)) {
+                    client.getSession().getBasicRemote().sendText(toJsonSend("SERVER: " + client.getName(), vin, "vin", "-"));
+                    client.getSessionOpponent().getBasicRemote().sendText(toJsonSend("SERVER: " + client.getNameOpponent(), key, value, "-"));
+                    client.getSessionOpponent().getBasicRemote().sendText(toJsonSend("SERVER: " + client.getNameOpponent(), lose, "lose", "-"));
+                } else {
+                    client.getSession().getBasicRemote().sendText(toJsonSend("SERVER: " + client.getName(), key, value, "-"));
+                    client.getSession().getBasicRemote().sendText(toJsonSend("SERVER: " + client.getName(), lose, "lose", "-"));
+                    client.getSessionOpponent().getBasicRemote().sendText(toJsonSend("SERVER: " + client.getNameOpponent(), vin, "vin", "-"));
+                }
+            }
+        }catch (IOException e){
+            e.getStackTrace();
         }
     }
 }

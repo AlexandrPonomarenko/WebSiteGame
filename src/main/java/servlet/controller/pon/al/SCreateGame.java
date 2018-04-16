@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.List;
 
@@ -36,8 +37,13 @@ public class SCreateGame extends HttpServlet {
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        util = new SUtil();
         request.setAttribute("list",SinglCollectGame.getInstance().getGames());
+        HttpSession session = util.getSession(request);
+        if(session.getAttribute("connect") != null){
+            session.removeAttribute("connect");
+            System.out.println("UUUDDDDDDDDAAAAAAAAAAALLLLLLLIIIIIIIIILLLLLLLLLLLLLLLll");}
         request.getRequestDispatcher("WEB-INF/views/games.jsp").forward(request, response);
-        System.out.println("+++++++++++++++++++++++++" + SinglCollectGame.getInstance().getGames().size());
+        System.out.println("size collection create game in the controller CREATEGAME " + SinglCollectGame.getInstance().getGames().size());
     }
 }

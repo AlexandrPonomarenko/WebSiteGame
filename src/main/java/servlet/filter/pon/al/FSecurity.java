@@ -24,18 +24,18 @@ public class FSecurity implements Filter {
         System.out.println("WEY + -- " + url);
         if(cur.beforeCheckWay(url)) {
             if (session != null && session.getAttribute("role") != null) {
-                System.out.println("USER NICKNAME " + session.getAttribute("role") + "WEY + -- " + url);
+//                System.out.println("USER NICKNAME " + session.getAttribute("role") + "WEY + -- " + url);
                 if (cur.checkWay((String) session.getAttribute("role"), url)) {
                     System.out.println("WEY + -- " + url);
                     chain.doFilter(req, resp);
                     return;
                 } else {
-                    System.out.println("ИМЯ ЕСТЬ ЭТО ПЕРЕД ОТПРАВКОЙ");
+//                    System.out.println("ИМЯ ЕСТЬ ЭТО ПЕРЕД ОТПРАВКОЙ");
                     response.sendRedirect(request.getContextPath() + "/jsp/warning.jsp");
                 }
 //                return;
             }else{
-                System.out.println("ИМЕНИ НЕТ ВЫШЕЛ НА СТАДИИ ПРОВЕРКИ РОЛИ");
+//                System.out.println("ИМЕНИ НЕТ ВЫШЕЛ НА СТАДИИ ПРОВЕРКИ РОЛИ");
                 response.sendRedirect(request.getContextPath() + "/jsp/warning.jsp");
             }
 //            else {

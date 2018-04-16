@@ -16,28 +16,28 @@ public class CheckURLRole {
             url = RoleMapping.getUrlForRole(role);
 //        }else
         for(String url : url){
-            System.out.println("checkWay JUST OUT COLLECTION ===== " + url);
+//            System.out.println("checkWay JUST OUT COLLECTION ===== " + url);
             if(url.equals(way)){
-                System.out.println(" checkWay TRUE + ----------" + url + " ============= " + way);
+//                System.out.println(" checkWay TRUE + ----------" + url + " ============= " + way);
                 return true;
             }
         }
-        System.out.println("checkWay FALSE");
+//        System.out.println("checkWay FALSE");
         return false;
     }
 
     public boolean beforeCheckWay(String way){
         for(String role : roles){
-            System.out.println(" beforeCheckWay ROLE " + role);
+//            System.out.println(" beforeCheckWay ROLE " + role);
             url = RoleMapping.getUrlForRole(role);
             for(String wayrole : url){
                 if(wayrole.equals(way)){
-                    System.out.println(" beforeCheckWay SELECT WAY " + wayrole + " --- " + role + " ARGUMENT WAY " + way);
+//                    System.out.println(" beforeCheckWay SELECT WAY " + wayrole + " --- " + role + " ARGUMENT WAY " + way);
                     return true;
                 }
             }
         }
-        System.out.println(" beforeCheckWay FALSE");
+//        System.out.println(" beforeCheckWay FALSE");
         return false;
     }
 }

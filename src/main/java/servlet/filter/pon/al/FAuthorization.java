@@ -19,7 +19,7 @@ public class FAuthorization implements Filter {
         HttpServletResponse response = (HttpServletResponse)resp;
         HttpSession session = request.getSession(false);
         String url = request.getServletPath();
-        System.out.println("COME IN FAuthorization ++++ " + url + "-------- " + request.getPathInfo());
+//        System.out.println("COME IN FAuthorization ++++ " + url + "-------- " + request.getPathInfo());
         if(url.equals("/home") || url.equals("/play") || url.equals("/gameStatistics")) {
             if (session != null && session.getAttribute("nickname") != null) {
                 chain.doFilter(req,resp);
