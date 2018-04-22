@@ -11,44 +11,46 @@
 <head>
     <meta content="text/html" charset="UTF-8">
     <title>Help</title>
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/all.css">
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/help.css">
     <jsp:include page="../../head/head.jsp"/>
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/ajaxHelp.js"></script>
 </head>
 <body>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h1>HELP</h1>
 
-    <div class="form">
-        <form method="post" action="help">
-            <div class="inside">
-                <label for="name">Your name:</label>
-                <input type="text" name="name" id="name" value="${requestScope.name}" class="validate">
-                <c:out value="${requestScope.error['nickName']}"/>
-                <%--<span class="empty-message">Empty</span>--%>
-                <%--<span class="small-length-message">Small length</span>--%>
-                <%--<span class="bad-words-message">Bad words</span>--%>
+    <h1 class="head">Do you have questions or do you need help? Just write to us.</h1>
+
+    <div class="help">
+        <form class="form">
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control" id="nam" name="name" value="${requestScope.name}" placeholder="Nickname">
+                        <span id="nickName"></span>
+                    </div>
+                    <div class="col">
+                        <input type="email" class="form-control" id="ema" name="email" value="${requestScope.email}" placeholder="Email">
+                        <span id="email"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <textarea class="form-control" name="texthelp" rows="5" cols="140" id="comment"></textarea>
+                        <span id="txms"></span>
+                    </div>
+                </div>
             </div>
-            <div class="inside">
-                <label for="email">Your Email address:</label>
-                <input type="email" name="email" id="email" value="${requestScope.email}" class="validate">
-                <c:out value="${requestScope.error['email']}"/>
-                <%--<span class="empty-message">Empty</span>--%>
-                <%--<span class="small-length-message">Small length</span>--%>
-                <%--<span class="bad-words-message">Bad words</span>--%>
+            <div class="but">
+                <button class="btn btn-outline-danger btn-lg" type="button">Send</button>
             </div>
-            <div class="inside">
-                <textarea name="texthelp" id="textarea" cols="140" rows="10" class="validate"></textarea>
-                <c:out value="${requestScope.error['txms']}"/>
-                <%--<span class="empty-message">Empty</span>--%>
-                <%--<span class="small-length-message">Small length</span>--%>
-                <%--<span class="bad-words-message">Bad words</span>--%>
-            </div>
-            <input class="submit-button" type="submit" value="Send">
-            <%--<c:out value="${requestScope.ok}"></c:out>--%>
         </form>
     </div>
 
+    <div class="modal fade bd-example-modal-sm" id="m" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content" id="open"></div>
+        </div>
+    </div>
 </body>
 </html>

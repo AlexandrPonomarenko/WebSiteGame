@@ -34,7 +34,7 @@ public class UserRegistration {
 
     public UserE registrationUser(UserE userE){
         setKey(gk.randomGen());
-        RoleE role = daoRole.getRoleByName("user");
+        RoleE role = daoRole.getRoleByName("admin");
         userE.setRoleE(role);
         userE.setKey(key);
         role.getUsers().add(userE);

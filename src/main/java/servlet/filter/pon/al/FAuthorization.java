@@ -30,7 +30,7 @@ public class FAuthorization implements Filter {
             }
         }else{
             chain.doFilter(req, resp);
-//            return;
+            return;
         }
 //        return;
 //        chain.doFilter(req, resp);

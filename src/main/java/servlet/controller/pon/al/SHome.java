@@ -21,7 +21,6 @@ public class SHome extends HttpServlet {
         request.setAttribute("sumVins", historyGame.getAllVin());
         request.setAttribute("sumLost", historyGame.getSunGame() - historyGame.getAllVin());
         request.setAttribute("allGame", historyGame.getSunGame());
-//        System.out.println(historyGame.getAllVin() + "+_+_+_+_+_++_+_+_+_" + c);
         request.getRequestDispatcher("WEB-INF/views/home.jsp").forward(request, response);
     }
 }

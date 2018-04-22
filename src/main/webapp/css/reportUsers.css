@@ -1,0 +1,46 @@
+form{
+    display: inline;
+}
+.but{
+    display: inline;
+}
+.head{
+    text-align: center;
+    margin-top: 100px;
+}
+.container{
+    margin-top: 25px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.block{
+    margin-left: 10px;
+    margin-right: 20px;
+}
+.container_users{
+    margin-top: 25px;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.block_users{
+    width: 100%;
+}
+.info{
+    display: inline;
+    margin-left: 2%;
+}
+.but, .btn_more, .btn_send{
+    margin-left: 3%;
+}

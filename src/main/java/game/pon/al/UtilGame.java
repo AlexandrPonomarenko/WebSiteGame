@@ -1,28 +1,37 @@
 package game.pon.al;
 
+import dao.pon.al.statgame.DAOGameStat;
+import dao.pon.al.user.DaoUser;
+import hibernate.pon.al.entity.GameStatE;
+import hibernate.pon.al.entity.UserE;
+
 import javax.websocket.Session;
 import java.io.IOException;
 import java.util.List;
 import java.util.Set;
 
 public class UtilGame {
-    private String [] tempArray = new String[3];
+//    private String [] tempArray = new String[3];
+    private DAOGameStat daoGameStat;
+    private DaoUser daoUser;
+    private GameStatE gameStatE;
 
-
-
-    public  String splitCommandWords(String comWor){
-        tempArray = comWor.split(":");
-        System.out.println("+++++++++++++++++++++++++++++ " + tempArray.length);
-//        System.out.println(tempArray[0] + " -- " + tempArray[1] + " - " + tempArray[2]);
-        System.out.println(tempArray[0] + " -- " + tempArray[1]);
-        if(tempArray[tempArray.length - 1].equals("create")){
-            return "create";
-        }else if(tempArray[tempArray.length - 1].equals("message")){
-            return "message";
-        }
-        return tempArray[tempArray.length - 1];
+    public UtilGame(){
+        daoGameStat = new DAOGameStat();
+        daoUser = new DaoUser();
     }
 
+    public void setVinOrLost(String name, int vin, int lost){
+        UserE user = daoUser.findUserByNickName(name);
+        if(user != null) {
+            gameStatE = new GameStatE();
+            gameStatE.setVin(vin);
+            gameStatE.setLost(lost);
+            gameStatE.setUserE(user);
+            user.getStatgame().add(gameStatE);
+            daoUser.update(user);
+        }
+    }
 
     public Client getAddPlayers(String name, List<Client> list){
         synchronized (list) {
@@ -37,10 +46,6 @@ public class UtilGame {
             System.out.println("VERNULL NULL IN THE METHOD getAddPlayers");
             return null;
         }
-    }
-
-    public String[] getSplitMessage(String msg){
-        return msg.split(":");
     }
 
     public Client getUserBySessionId(String id, List<Client> list){
@@ -164,12 +169,12 @@ public class UtilGame {
         return false;
     }
 
-    public boolean checkCountStep(Client client){
-        if(client.getSteps() + 1 <= 9){
-            return true;
-        }
-        return false;
-    }
+//    public boolean checkCountStep(Client client){
+//        if(client.getSteps() + 1 <= 9){
+//            return true;
+//        }
+//        return false;
+//    }
 
     public void incrementStep(Client client){
         System.out.println("METHOD  incrementStep SET STEPS BEFORE" + client.getSteps());

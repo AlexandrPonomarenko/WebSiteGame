@@ -88,7 +88,7 @@ public class DaoUser extends AbstractDAO<UserE, Integer> implements DAOUserInter
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction tx = session.beginTransaction();
         try{
-            UserE user = session.load(UserE.class, id);
+            UserE user = session.get(UserE.class, id);
             if(user != null){
                 session.delete(user);
             }

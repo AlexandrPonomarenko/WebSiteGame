@@ -11,9 +11,18 @@
 <head>
     <meta content="text/html" charset="UTF-8">
     <title>About</title>
+    <%--<jsp:include page="../head/head.jsp"/>--%>
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/all.css">
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/about.css">
     <jsp:include page="../head/head.jsp"/>
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
 </head>
 <body>
-    <h1>ABOUT PAGE</h1>
+    <h2 class="head">We are young, hot, purposeful, interesting team.</h2>
+    <h3 class="under_head">Our projects:</h3>
+    <div class="proj">
+        <a class="one" href="#">Warm star</a>
+        <a class="two" href="#">Just play</a>
+    </div>
 </body>
 </html>

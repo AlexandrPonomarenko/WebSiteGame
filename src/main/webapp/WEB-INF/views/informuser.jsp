@@ -11,14 +11,14 @@
 <head>
     <meta content="text/html" charset="UTF-8">
     <title>INFO</title>
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/all.css">
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/info.css">
     <jsp:include page="../../head/head.jsp"/>
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <%--<jsp:include page="../../head/head.jsp"/>--%>
 </head>
 <body>
 
-<br>
-<br>
-<br>
-<br>
 <div class="form">
     <form method="post" action="info">
         <div class="inside">

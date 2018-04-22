@@ -1,0 +1,17 @@
+.head{
+    text-align: center;
+    margin-top: 100px;
+}
+.control{
+    height: 200px;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 200px;
+}
+.but{
+    margin-top: 30px;
+    margin-left: 43%;
+}
+#nickName, #password{
+    color: red;
+}

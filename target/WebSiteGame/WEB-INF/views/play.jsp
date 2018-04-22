@@ -11,12 +11,15 @@
 <head>
     <meta content="text/html" charset="UTF-8">
     <title>Play</title>
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/all.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/game.css">
+    <jsp:include page="../../head/head.jsp"/>
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/libJquery/jquery-3.3.1.min.js"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/game.js"></script>
 </head>
 <body>
-    <jsp:include page="../../head/head.jsp"/>
+    <%--<jsp:include page="../../head/head.jsp"/>--%>
     <br>
     <br>
     <br>
@@ -41,7 +44,7 @@
             var flag = document.getElementById("flag").value;
             var typeStep = "";
             var timer = 0;
-            var id = 0;
+            var id = null;
             setStartDisable();
             // setTimer();
 
@@ -209,20 +212,14 @@
             }
 
             function setTimer(mark) {
-                if(mark !== "x" || mark !== "o"){
+                if (mark === "&") {
                     console.log("-----TIMER " + timer + "- " + mark);
                     timer++;
-                    setTimeout(setTimer.call(this, mark), 1000)
-                }else{
-                    console.log("======TIMER " + timer);
-                    clearTimeout(timer);
+                    id = setTimeout(function () {
+                        id = null;
+                        setTimer(Game.mark);
+                    }, 1000);
                 }
-
-                // if(timer < 15) {
-                //     console.log(timer);
-                //     timer += 1;
-                //     setTimeout(setTimer, 1000);
-                // }
             }
 
         });

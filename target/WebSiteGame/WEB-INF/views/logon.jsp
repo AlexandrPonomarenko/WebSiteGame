@@ -11,46 +11,38 @@
 <head>
     <meta content="text/html" charset="UTF-8">
     <title>Logon</title>
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/all.css">
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/logon.css">
     <jsp:include page="../../head/head.jsp"/>
-    <%--<jsp:include page="${pageContext.request.contextPath}/head/head.jsp"/>--%>
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <script type="text/javascript" src="${pageContext.request.contextPath}/js/ajaxQueryLogon.js"></script>
 </head>
 <body>
-
-<br>
-<br>
-<br>
-<br>
-    <c:if test="${requestScope.warning != null}">
-        <h2>${warning}</h2>
-    </c:if>
-<div class="parent">
-    <div class="child1">
-        <span id="one">Choose your dream</span>
-        <span id="two">Just do it</span>
-    </div>
-    <div class="child2">
-        <form method="POST" action="logon">
-            <div class="one">
-                <label for="login">Nick name</label>
-                <input type="text" name="login" id="login" class="validate" value="Alexxxx"/>
-                <%--<span class="empty-message">Empty</span>--%>
-                <%--<span class="small-length-message">Small length</span>--%>
-                <%--<span class="bad-words-message">Bad words</span>--%>
-                <c:out value = "${requestScope.error['nickName']}"/>
-            </div>
-            <div class="one">
-                <label for="password">Password</label>
-                <input type="password" name="password" id="password" class="validate" value="23ATDHFkz$"/>
-                <%--<span class="empty-message">Empty</span>--%>
-                <%--<span class="small-length-message">Small length</span>--%>
-                <%--<span class="bad-words-message">Bad words</span>--%>
-                <c:out value = "${requestScope.error['password']}"/>
+    <h1 class="head">Go to home</h1>
+    <div class="control">
+        <form class="form">
+            <div class="col">
+                <div class="row">
+                    <div class="col">
+                        <input type="text" class="form-control" id="n" name="login" placeholder="Nickname">
+                        <span id="nickName"></span>
+                    </div>
+                    <div class="col">
+                        <input type="password" class="form-control" id="p" name="password" placeholder="Password">
+                        <span id="password"></span>
+                    </div>
+                </div>
             </div>
             <div class="but">
-                <button class="submit-button" type="submit"> GO home</button>
+                <button class="btn btn-outline-danger btn-lg" type="button">Go home</button>
             </div>
         </form>
     </div>
-</div>
+
+    <div class="modal fade bd-example-modal-sm" id="m" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content" id="open"></div>
+        </div>
+    </div>
 </body>
 </html>

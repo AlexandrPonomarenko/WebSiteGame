@@ -1,6 +1,8 @@
 package servlet.error;
 
 
+import org.json.simple.JSONObject;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -10,11 +12,13 @@ public class CheckErrorFilds {
 //    private String txms;
 //    private String email;
 //    private String nickname;
+    private JSONObject object;
     private Map<String, String> error;
     private boolean valid;
 
     public CheckErrorFilds(){
         error = new HashMap<>();
+        object = new JSONObject();
         valid = true;
     }
 
@@ -30,6 +34,7 @@ public class CheckErrorFilds {
 
         if(!validNotNullAndEmpty(p)){
             error.put("password", "empty string");
+            object.put("password","empty string");
             return false;
         }
 
@@ -37,11 +42,13 @@ public class CheckErrorFilds {
 
         if(p.length() < 5){
             error.put("password", "to be > 5");
+            object.put("password","to be > 5");
             return false;
         }
 
         if(!p.matches("^.*(?=.{8,})(?=.*\\d)(?=.*[a-zA-Z])|(?=.{8,})(?=.*\\d)(?=.*[!@#$%^&])|(?=.{8,})(?=.*[a-zA-Z])(?=.*[!@#$%^&]).*$")){
             error.put("password", "wrong schema");
+            object.put("password","wrong schema");
             System.out.println(" M : veryPassword OUT ");
             return false;
         }
@@ -52,6 +59,7 @@ public class CheckErrorFilds {
 
         if(!validNotNullAndEmpty(email)){
             error.put("email", "empty string");
+            object.put("email","empty string");
             return false;
         }
 
@@ -59,10 +67,12 @@ public class CheckErrorFilds {
 
         if(email.length() < 2){
             error.put("email", "to be > 3 char");
+            object.put("email","to be > 3 char");
             return false;
         }
         if(!email.matches("^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$")){
             error.put("email", "wrong schema");
+            object.put("email", "wrong schema");
             System.out.println(" M : veryEmail OUT ");
             return false;
         }
@@ -73,6 +83,7 @@ public class CheckErrorFilds {
 
         if(!validNotNullAndEmpty(txms)){
             error.put("txms", "empty string");
+            object.put("txms", "empty string");
             return false;
         }
 
@@ -80,13 +91,14 @@ public class CheckErrorFilds {
 
         if(txms.length() < 14){
             error.put("txms", "to be > 14 char");
+            object.put("txms", "to be > 14 char");
             return false;
         }
-        if(!txms.matches("[a-zA-Z]*")){
-            error.put("txms", "wrong schema");
-            System.out.println(" M : veryTxms OUT ");
-            return false;
-        }
+//        if(!txms.matches("[a-zA-Z]*")){
+//            error.put("txms", "wrong schema");
+//            System.out.println(" M : veryTxms OUT ");
+//            return false;
+//        }
         return true;
     }
 
@@ -94,6 +106,7 @@ public class CheckErrorFilds {
 
         if(!validNotNullAndEmpty(name)){
             error.put("name", "empty string");
+            object.put("name", "empty string");
             return false;
         }
 
@@ -101,11 +114,13 @@ public class CheckErrorFilds {
 
         if(name.length() < 3){
             error.put("name", "to be > 3");
+            object.put("name", "to be > 3");
             return false;
         }
         if(!name.matches("[a-zA-Z]*")){
             System.out.println(" M : veryName OUT ");
             error.put("name", "wrong schema");
+            object.put("name", "wrong schema");
             return false;
         }
         return true;
@@ -115,6 +130,7 @@ public class CheckErrorFilds {
 
         if(!validNotNullAndEmpty(nickName)){
             error.put("nickName", "empty string");
+            object.put("nickName", "empty string");
             return false;
         }
 
@@ -122,11 +138,13 @@ public class CheckErrorFilds {
 
         if(nickName.length() < 3){
             error.put("nickName", "to be > 3 char");
+            object.put("nickName", "to be > 3 char");
             return false;
         }
         if(!nickName.matches("[a-zA-Z]*")){
             System.out.println("M : veryNickName OUT ");
             error.put("nickName", "wrong schema");
+            object.put("nickName", "wrong schema");
             return false;
         }
         return true;
@@ -139,9 +157,9 @@ public class CheckErrorFilds {
 
         if(!p.equals(p2)){
             error.put("pas", "to be equals");
+            object.put("pas", "to be equals");
             return false;
         }
-
         return true;
     }
 
@@ -169,7 +187,7 @@ public class CheckErrorFilds {
         if(!veryPassword(pt)){
             valid = false;
         }
-        if(!veryPassword(e)){
+        if(!veryEmail(e)){
             valid = false;
         }
         if(!verEquPasswords(p, pt)){
@@ -231,5 +249,10 @@ public class CheckErrorFilds {
 
     public Map<String, String> getError(){
         return error;
+    }
+
+    public String getJsonObj(){
+        System.out.println("SJON STRING OUT" + object.toJSONString());
+        return object.toJSONString();
     }
 }

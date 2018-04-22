@@ -11,7 +11,11 @@
 <head>
     <meta content="text/html" charset="UTF-8">
     <title>GAMES</title>
+    <%--<jsp:include page="../../head/head.jsp"/>--%>
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/all.css">
     <jsp:include page="../../head/head.jsp"/>
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <%--<jsp:include page="../../head/head.jsp"/>--%>
 </head>
 <body>
     <br>

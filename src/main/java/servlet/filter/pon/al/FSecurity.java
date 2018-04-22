@@ -14,6 +14,7 @@ public class FSecurity implements Filter {
     private FilterConfig filterConfig;
     private CheckURLRole cur;
     public void destroy() {
+        filterConfig = null;
     }
 
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
@@ -33,7 +34,6 @@ public class FSecurity implements Filter {
 //                    System.out.println("ИМЯ ЕСТЬ ЭТО ПЕРЕД ОТПРАВКОЙ");
                     response.sendRedirect(request.getContextPath() + "/jsp/warning.jsp");
                 }
-//                return;
             }else{
 //                System.out.println("ИМЕНИ НЕТ ВЫШЕЛ НА СТАДИИ ПРОВЕРКИ РОЛИ");
                 response.sendRedirect(request.getContextPath() + "/jsp/warning.jsp");
@@ -53,7 +53,7 @@ public class FSecurity implements Filter {
 //            }
         }else{
             chain.doFilter(req, resp);
-//            return;
+            return;
         }
 //        if(cur.checkWay())
 //        chain.doFilter(req, resp);

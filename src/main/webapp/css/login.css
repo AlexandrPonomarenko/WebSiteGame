@@ -1,0 +1,18 @@
+.control{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 150px;
+}
+.row{
+    padding-bottom: 20px;
+}
+.but{
+    margin-left: 43%;
+}
+.head{
+    text-align: center;
+    margin-top: 100px;
+}
+#nickName, #email, #txms, #passwordTwo, #lName, #fName, #password{
+    color: red;
+}

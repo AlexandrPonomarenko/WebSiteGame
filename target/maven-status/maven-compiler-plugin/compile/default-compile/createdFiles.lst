@@ -32,6 +32,7 @@ dao/pon/al/user/DaoUser.class
 game/pon/al/UtilGame.class
 servlet/controller/pon/al/SAll.class
 game/pon/al/SinglCollectGame.class
+util/pon/al/SystemMessage.class
 servlet/error/CheckErrorFilds.class
 servlet/util/GeneratorKeys.class
 servlet/util/RoleMapping.class

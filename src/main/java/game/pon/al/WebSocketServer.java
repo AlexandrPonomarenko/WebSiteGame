@@ -318,10 +318,14 @@ public class WebSocketServer {
                     client.getSession().getBasicRemote().sendText(toJsonSend("SERVER: " + client.getName(), vin, "vin", "-"));
                     client.getSessionOpponent().getBasicRemote().sendText(toJsonSend("SERVER: " + client.getNameOpponent(), key, value, "-"));
                     client.getSessionOpponent().getBasicRemote().sendText(toJsonSend("SERVER: " + client.getNameOpponent(), lose, "lose", "-"));
+                    utilGame.setVinOrLost(client.getName(), 1111,0);
+                    utilGame.setVinOrLost(client.getNameOpponent(), 0,222);
                 } else {
                     client.getSession().getBasicRemote().sendText(toJsonSend("SERVER: " + client.getName(), key, value, "-"));
                     client.getSession().getBasicRemote().sendText(toJsonSend("SERVER: " + client.getName(), lose, "lose", "-"));
                     client.getSessionOpponent().getBasicRemote().sendText(toJsonSend("SERVER: " + client.getNameOpponent(), vin, "vin", "-"));
+                    utilGame.setVinOrLost(client.getName(), 0,111111);
+                    utilGame.setVinOrLost(client.getNameOpponent(), 555,0);
                 }
             }
         }catch (IOException e){

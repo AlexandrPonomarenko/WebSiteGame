@@ -113,8 +113,9 @@ public class Main {
 //            AllUsers();
 //            tx.commit();
 //            e("Alex:create");
-            System.out.println(buildJson() + "START");
-            parseJson(buildJson());
+
+//            System.out.println(buildJson() + "START");
+//            parseJson(buildJson());
         }catch (Exception e){
             e.printStackTrace();
             System.out.println(e.getMessage());

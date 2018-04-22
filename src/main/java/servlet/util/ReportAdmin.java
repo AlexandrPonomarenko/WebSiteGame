@@ -41,6 +41,11 @@ public class ReportAdmin {
         return  games;
     }
 
+    private String getUser(String id){
+        user = daoUser.getEntityById(Integer.parseInt(id));
+        return user.getNickname();
+    }
+
     public UserE getSelectUser(){
         return user;
     }
@@ -55,34 +60,34 @@ public class ReportAdmin {
         }else if (request.getParameter("bname") != null && request.getParameter("bname").equals("send")){
             System.out.println("---" + "send " + "---");
             session = util.getSession(request);
-            session.setAttribute("send", request.getParameter("nickname"));
+            session.setAttribute("send", getUser(request.getParameter("id")));
             return "send";
         }else if (request.getParameter("bname") != null && request.getParameter("bname").equals("delete")){
-            System.out.println("---" + "delete " + "---");
-//            session = util.getSession(request);
-            session.setAttribute("delete", request.getParameter("id"));
+            System.out.println("---" + "delete " + "---" + request.getParameter("id"));
+            session = util.getSession(request);
+            deleteUser(request.getParameter("id"));
             return "delete";
         }else if (request.getParameter("bname") != null && request.getParameter("bname").equals("block")){
             System.out.println("---" + "block " + "---");
-//            session = util.getSession(request);
-            session.setAttribute("block", request.getParameter("id"));
+            session = util.getSession(request);
+            blockUser(request.getParameter("id"));
+//            session.setAttribute("block", request.getParameter("id"));
             return "block";
         }
         System.out.println("---" + "none " + "---");
         return "none";
     }
 
-//    public void setSessionAtribute(String attribute){
-//        if(){
-//
-//        }else if(){
-//
-//        }else if(){
-//
-//        }else if(){
-//
-//        }
-//    }
+    private void deleteUser(String id){
+        daoUser.delete(Integer.parseInt(id));
+    }
+
+    private void blockUser(String id){
+        UserE userE = daoUser.getEntityById(Integer.parseInt(id));
+        userE.setStatus("OFF");
+        daoUser.update(userE);
+    }
+
     private void vievList(Set<GameStatE> set){
         for (GameStatE g : set){
             System.out.println(g.toString());

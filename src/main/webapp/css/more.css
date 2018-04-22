@@ -1,0 +1,41 @@
+.head{
+    text-align: center;
+    margin-top: 100px;
+}
+.name{
+    color: darkgreen
+}
+.container{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.block{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.empty{
+    margin-top: 50px;
+    text-align: center;
+    font-size: 20px;
+}
+.container_games{
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+.block_games{
+    width: 100%;
+    margin-top: 10px;
+}
+.game{
+    margin-left: 22%;
+}
+.list{
+    text-align: center;
+    margin-top: 30px;
+}

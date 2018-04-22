@@ -1,0 +1,19 @@
+.head{
+    text-align: center;
+    margin-top: 120px;
+}
+.help{
+    margin-top: 100px;
+    width: 70%;
+    margin-left: 15%;
+}
+.row{
+    margin-top: 20px;
+}
+.but{
+    margin-top: 20px;
+    margin-left: 46%;
+}
+#nickName, #email, #txms{
+    color: red;
+}

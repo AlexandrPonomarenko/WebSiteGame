@@ -1,0 +1,45 @@
+.head{
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+.allGame, .win, .lost, .a, .w, .l, .head, .s{
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 30px;
+}
+.text{
+    margin-top: 100px;
+}
+.allGame{
+    margin-left: 16%;
+}
+.win{
+    margin-left: 25%;
+}
+.lost{
+    margin-left: 25%;
+}
+.num{
+    margin-top: 150px;
+}
+.a{
+    margin-left: 16%;
+}
+.w{
+    margin-left: 28%;
+}
+.l{
+    margin-left: 26%;
+}
+.a, .w, .l{
+    font-size: 100px;
+}
+.s{
+    margin-left: 45%;
+}
+.status{
+    font-size: 35px;
+}
+.name{
+    color: goldenrod;
+}

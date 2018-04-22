@@ -11,20 +11,36 @@
 <head>
     <meta content="text/html" charset="UTF-8">
     <title>More</title>
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/more.css">
+    <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/all.css">
     <jsp:include page="../../head/head.jsp"/>
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
 </head>
 <body>
-    <br>
-    <br>
-    <br>
-    <h1>More user statistics about user ${requestScope.selectuser.nickname}</h1>
-    <h3>${requestScope.selectuser.id}.......${requestScope.selectuser.nickname}.......${requestScope.selectuser.firstname}....
-        ${requestScope.selectuser.lastname}...... ${requestScope.selectuser.status}......${requestScope.selectuser.key}
-        ${requestScope.selectuser.roleName}
-    </h3>
+    <h1 class="head">More user statistics about user <span class="name">${requestScope.selectuser.nickname}</span></h1>
+    <div class="container">
+        <div class="block">User id: ${requestScope.selectuser.id}</div>
+        <div class="block">User Nick name: ${requestScope.selectuser.nickname}</div>
+        <div class="block">User First name:${requestScope.selectuser.firstname}</div>
+        <div class="block">User Last name: ${requestScope.selectuser.lastname}</div>
+        <div class="block">User Status: ${requestScope.selectuser.status}</div>
+        <div class="block">User Key: ${requestScope.selectuser.key}</div>
+        <div class="block">User Role: ${requestScope.selectuser.roleName}</div>
+    </div>
 
-    <c:forEach items="${requestScope.list}" var="game">
-        <p>${game.id_game}......${game.lost}......${game.vin}</p>
-    </c:forEach>
+    <c:if test="${requestScope.emptySet == null}">
+        <p class="list">List Games</p>
+    </c:if>
+
+    <div class="container_games">
+        <c:forEach items="${requestScope.list}" var="game">
+            <div class="block_games">
+                <span class="game">Game id: ${game.id_game}</span><span class="game">Lost: ${game.lost}</span><span class="game">Vin: ${game.vin}</span>
+            </div>
+        </c:forEach>
+    </div>
+    <c:if test="${requestScope.emptySet != null}">
+        <p class="empty">${requestScope.emptySet}</p>
+    </c:if>
 </body>
 </html>
