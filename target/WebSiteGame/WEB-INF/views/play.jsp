@@ -1,10 +1,4 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: alex
-  Date: 30.03.18
-  Time: 14:27
-  To change this template use File | Settings | File Templates.
---%>
+
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
@@ -13,27 +7,30 @@
     <title>Play</title>
     <link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/css/all.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/css/game.css">
-    <jsp:include page="../../head/head.jsp"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/css/play.css">
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/libJquery/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <script type="text/javascript" src="${pageContext.request.contextPath}/js/game.js"></script>
 </head>
 <body>
-    <%--<jsp:include page="../../head/head.jsp"/>--%>
-    <br>
-    <br>
-    <br>
-    <br>
-    <h1>PLAYYYYYYYYYYYYY</h1>
-    <div>
+
+<div class="content-wrapper">
+    <div class="content">
+        <jsp:include page="../../head/head.jsp"/>
+     <div>
         <input type="hidden" id="userName" value="${sessionScope.nickname}" />
         <input type="hidden" id="flag" value="${requestScope.flag}" />
     </div>
-    <div>
-        <input type="text" id="userinput" value="" /> <br>
-        <input type="submit" value="Send Message to Server" onclick="start()" />
+    <div class="timer">
+        <span id="numbers"></span>
     </div>
-    <div id="messages"></div>
+    <%--<div>--%>
+        <%--<input type="text" id="userinput" value="" /> <br>--%>
+        <%--<input type="submit" value="Send Message to Server" onclick="start()" />--%>
+    <%--</div>--%>
     <div id="game"></div>
     <script type="text/javascript">
         $(document).ready(function () {
@@ -46,7 +43,6 @@
             var timer = 0;
             var id = null;
             setStartDisable();
-            // setTimer();
 
             webSocket.onerror = function(event) {
                 console.log(event.data);
@@ -95,14 +91,10 @@
                 container.appendChild(messageNode);
 
                 document.getElementById('messages').appendChild(container);
-
-                // console.log(event.data);
-                // document.getElementById('messages').innerHTML += '<br />'
-                //     + event.data;
             }
 
             function onOpen(event) {
-                document.getElementById('messages').innerHTML = 'Now Connection established';
+                // document.getElementById('messages').innerHTML = 'Now Connection established';
                 Game.setDisableAll();
                 setTimer(Game.getMark());
             }
@@ -112,9 +104,6 @@
             }
 
             window.start = function () {
-                // var text = document.getElementById("userinput").value;
-                // var text = document.getElementById("userName").value + ":" +"message:"+ document.getElementById("userinput").value;
-                // var text = buildJsonObjectMessage(document.getElementById("userName").value, "message", document.getElementById("userinput").value);
                 var text = createData("message", document.getElementById("userinput").value);
                 webSocket.send(text);
                 return false;
@@ -130,13 +119,10 @@
             function startSendMes() {
                 var text;
                 if(document.getElementById("flag").value === "create"){
-                    // text = buildJsonObjectCreate(document.getElementById("userName").value, "create");
                     text = createData("create");
                 }else{
-                    // text = buildJsonObjectAdd(document.getElementById("userName").value, "add", document.getElementById("flag").value, "-");
                     text = createData("add", "-");
                 }
-                // var text = buildJsonObjectAdd(document.getElementById("userName").value, "add", document.getElementById("flag").value, "-");
                 webSocket.send(text);
             }
 
@@ -162,7 +148,6 @@
                 }
             }
 
-
             $(Game).on('button-event', function (e, data) {
                 console.log(data.attr);
                 starton(data.attr)
@@ -172,23 +157,6 @@
 
             function setStepOpponent(step, value, message){
                 console.log("Tttt " , step, value, message, step === "x" || step === "o" || message !=="step" && value !== "-");
-                // if(step === "x" || step === "o" || message !=="step" && value !== "-"){
-                //     console.log("TYYYTT " + step, value, message);
-                //     Game.setEnableAll();
-                // }else if(value === "vin" || value === "lose"){
-                //     Game.setDisableAll();
-                // }
-
-                // if(value === "vin" || value === "lose" || value === "between"){
-                //     console.log("qqqq " + step, value, message);
-                //     Game.setDisableAll();
-                // }else if(step === "x"|| message !=="step" && value !== "-"){
-                //     console.log("Step: -" + step + " Value: -" + value + " Message -" +  message);
-                //     Game.setEnableAll();
-                // }else if(message.substr(0,4) === "Your"){
-                //     console.log("JUST " + " Message -" +  message);
-                //     Game.setDisableAll();
-                // }
 
                 if(value === "vin" || value === "lose" || value === "between"){
                     console.log("qqqq " + step, value, message);
@@ -214,6 +182,7 @@
             function setTimer(mark) {
                 if (mark === "&") {
                     console.log("-----TIMER " + timer + "- " + mark);
+                    $('#numbers').html(timer);
                     timer++;
                     id = setTimeout(function () {
                         id = null;
@@ -224,5 +193,12 @@
 
         });
     </script>
+
+    <div id="messages"></div>
+    </div>
+        <footer class="page-footer font-small indigo pt-0">
+            <jsp:include page="../../footer/footer.jsp"/>
+        </footer>
+    </div>
 </body>
 </html>

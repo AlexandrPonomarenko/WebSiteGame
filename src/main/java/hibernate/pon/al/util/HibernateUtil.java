@@ -12,26 +12,6 @@ public class HibernateUtil {
     private static SessionFactory sessionFactory = buildSessionFactory();
     private static StandardServiceRegistry serviceRegistry;
 
-//    public static SessionFactory getSessionFactory(){
-//        if(sessionFactory == null){
-//            Configuration configuration = new Configuration().configure();
-//            ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(configuration.getProperties()).build();
-//            sessionFactory = configuration.buildSessionFactory(serviceRegistry);
-////             sessionFactory = new Configuration().configure("hibernate.cfg.xml").buildSessionFactory();
-//
-////            final StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
-////                    .configure("hibernate.cfg.xml") // configures settings from hibernate.cfg.xml
-////                    .build();
-////            try {
-////                sessionFactory = new MetadataSources( registry ).buildMetadata().buildSessionFactory();
-////            }catch (Exception e){
-////
-////            }
-//        }
-//        return sessionFactory;
-//    }
-
-
     public static SessionFactory buildSessionFactory(){
         serviceRegistry = new StandardServiceRegistryBuilder().configure().build();
         try {
@@ -45,7 +25,6 @@ public class HibernateUtil {
     }
 
     public static void shutdown() {
-        // Close caches and connection pools
         if(sessionFactory != null){
             sessionFactory.close();
         }

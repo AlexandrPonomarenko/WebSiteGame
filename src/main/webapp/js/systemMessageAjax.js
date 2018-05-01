@@ -89,7 +89,7 @@
                         $('#l').val('');
                         $('#p').val('');
                         $('#pt').val('');
-                        window.location.href = "//localhost:8080/WebSiteGame/logon"
+                        window.location.href = '//' + window.location.host + '/WebSiteGame/logon';
                     }
                 }
             });

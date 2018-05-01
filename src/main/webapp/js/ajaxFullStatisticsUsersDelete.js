@@ -1,12 +1,5 @@
 (function($) {
     $(document).ready(function() {
-        // $('.btn_del').click(function() {
-        //     var data = {
-        //         "id": $($(this).parent()).attr('data-user-id'),
-        //         "bname": "delete"
-        //     };
-        // });
-
         function send(data, callback) {
             $.ajax({
                 type: 'POST',
@@ -25,30 +18,6 @@
                 "id": parent.attr('data-user-id'),
                 "bname": action
             };
-            // var data = {};
-            // $($('.form').find('input')).each(function (index, input) {
-            //     data[$(input).attr('name')] = $(input).val();
-            // });
-
-            // data[$('.btn_del').attr('name')] = $('button.btn_del').val();
-            // data[$('#del').attr('name')] = $('input#del').val();
-
-            // console.log(data);
-            // $.ajax({
-            //     type: 'POST',
-            //     data: data,
-            //     url: 'fullreport',
-            //     success: function(result) {
-            //         console.log(result + "------------------------------------------");
-            //         $('#open').html(result);
-            //         $('#m').modal('show');
-            //         setTimeout(function () {
-            //             $('#m').modal('hide');
-            //         }, 3000);
-            //
-            //         parent.remove();
-            //     }
-            // });
 
             send(data, function(result) {
                 switch(action) {
@@ -63,15 +32,12 @@
                         });
                         break;
                     case 'more':
-                        console.log('more');
-                        window.location.replace("http://localhost:8080/WebSiteGame/fullreport/all");
+                        window.location.replace(window.location.href = '//' + window.location.host + '/WebSiteGame/fullreport/all');
                         break;
                     case 'send':
-                        console.log('send');
-                        window.location.replace("http://localhost:8080/WebSiteGame/info");
+                        window.location.replace(window.location.href = '//' + window.location.host + '/WebSiteGame/info');
                         break;
                     case 'block':
-                        console.log('block');
                         $('#open').html(result);
                         $('#m').modal('show');
                         setTimeout(function () {

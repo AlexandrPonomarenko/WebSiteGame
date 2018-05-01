@@ -18,7 +18,6 @@ public class GeneratorKeys {
         for (int i = 0; i < abs.length / 2; i++){
             key += abs[random.nextInt(abs.length)];
         }
-        System.out.println("CLASS GeneratorKeys -- " + key );
         return key;
     }
 }

@@ -32,10 +32,8 @@ public class DaoUser extends AbstractDAO<UserE, Integer> implements DAOUserInter
         }catch (HibernateException e){
             tx.rollback();
             e.printStackTrace();
-            System.out.println("Error in method getAll " + e.getMessage());
             return users;
         }finally {
-            System.out.println("Sesion close getAll - in class USER");
             session.close();
         }
         return users;
@@ -54,7 +52,6 @@ public class DaoUser extends AbstractDAO<UserE, Integer> implements DAOUserInter
             System.out.println("Error in method update " + e.getMessage());
             return null;
         }finally {
-            System.out.println("Sesion close update - in class USER");
             session.close();
         }
         return entity;
@@ -66,7 +63,6 @@ public class DaoUser extends AbstractDAO<UserE, Integer> implements DAOUserInter
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction tx = session.beginTransaction();
         try {
-//            tx = session.beginTransaction();
             userE = session.load(UserE.class, id);
             if (userE != null){
                 System.out.println("it is a getEntityById " + userE.toString());
@@ -75,9 +71,7 @@ public class DaoUser extends AbstractDAO<UserE, Integer> implements DAOUserInter
         }catch (HibernateException e){
             tx.rollback();
             e.printStackTrace();
-            System.out.println("Error in method getEntityById " + e.getMessage());
         }finally {
-            System.out.println("Sesion close getEntityById - in class USER");
             session.close();
         }
         return userE;
@@ -96,10 +90,8 @@ public class DaoUser extends AbstractDAO<UserE, Integer> implements DAOUserInter
         }catch(HibernateException e){
             tx.rollback();
             e.printStackTrace();
-            System.out.println("Error in method delete " + e.getMessage());
             return false;
         }finally {
-            System.out.println("Sesion close delete - in class USER");
             session.close();
         }
         return true;
@@ -111,7 +103,6 @@ public class DaoUser extends AbstractDAO<UserE, Integer> implements DAOUserInter
         Transaction tx = session.beginTransaction();
         try {
             session.save(entity);
-//            session.flush();
             tx.commit();
         }catch (HibernateException e){
             tx.rollback();
@@ -119,7 +110,6 @@ public class DaoUser extends AbstractDAO<UserE, Integer> implements DAOUserInter
             System.out.println("Error in method create " + e.getMessage());
             return false;
         }finally {
-            System.out.println("Sesion close create - in class USER");
             session.close();
         }
         return true;
@@ -132,16 +122,14 @@ public class DaoUser extends AbstractDAO<UserE, Integer> implements DAOUserInter
         Transaction tx = session.beginTransaction();
         try {
             userE = (UserE) session.createCriteria(UserE.class).add(Restrictions.eq("nickname", nickname)).uniqueResult();
-            if(userE != null) {
-                System.out.println(" IT IS FROM findUserByNickName = " +userE.toString());
-            }
+//            if(userE != null) {
+//                System.out.println(" IT IS FROM findUserByNickName = " +userE.toString());
+//            }
             tx.commit();
         }catch (HibernateException e){
             tx.rollback();
             e.printStackTrace();
-            System.out.println("Error in method findUserByNickName " + e.getMessage());
         }finally {
-            System.out.println("Sesion close findUserByNickName - in class USER");
             session.close();
         }
 
@@ -155,16 +143,14 @@ public class DaoUser extends AbstractDAO<UserE, Integer> implements DAOUserInter
         Transaction tx = session.beginTransaction();
         try {
             userE = (UserE) session.createCriteria(UserE.class).add(Restrictions.eq("key", key)).uniqueResult();
-            if(userE != null) {
-                System.out.println(userE.toString());
-            }
+//            if(userE != null) {
+//                System.out.println(userE.toString());
+//            }
             tx.commit();
         }catch (HibernateException e){
             tx.rollback();
             e.printStackTrace();
-            System.out.println("Error in method confirmKey " + e.getMessage());
         }finally {
-            System.out.println("Sesion close findConfirmKey - in class USER");
             session.close();
         }
 

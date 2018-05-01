@@ -17,13 +17,9 @@ public class SContextListener implements ServletContextListener {
         servletContext.setAttribute("daoUser", new DaoUser());
         servletContext.setAttribute("daoRole", new DAORole());
         servletContext.setAttribute("daoStatGame", new DAOGameStat());
-//        servletContext.setAttribute("list",);
-        System.out.println("contextInitialized");
     }
 
     @Override
     public void contextDestroyed(ServletContextEvent sce) {
-
-        System.out.println("contextDestroyed");
     }
 }

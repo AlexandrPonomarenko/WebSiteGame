@@ -3,7 +3,6 @@ package dao.pon.al.role;
 import dao.pon.al.util.AbstractDAO;
 import dao.pon.al.util.DAORoleInterface;
 import hibernate.pon.al.entity.RoleE;
-import hibernate.pon.al.entity.UserE;
 import hibernate.pon.al.util.HibernateUtil;
 import org.hibernate.HibernateException;
 import org.hibernate.Query;
@@ -30,10 +29,8 @@ public class DAORole extends AbstractDAO<RoleE, Integer> implements DAORoleInter
         }catch (HibernateException e){
             tx.rollback();
             e.printStackTrace();
-            System.out.println("Error in method getAll " + e.getMessage());
             return roles;
         }finally {
-            System.out.println("Sesion close getAll - in class ROLE");
             session.close();
         }
         return roles;
@@ -49,10 +46,8 @@ public class DAORole extends AbstractDAO<RoleE, Integer> implements DAORoleInter
         }catch(HibernateException e){
             tx.rollback();
             e.printStackTrace();
-            System.out.println("Error in method update Role" + e.getMessage());
             return null;
         }finally {
-            System.out.println("Sesion close update - in class ROLE");
             session.close();
         }
         return entity;
@@ -64,18 +59,14 @@ public class DAORole extends AbstractDAO<RoleE, Integer> implements DAORoleInter
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction tx = session.beginTransaction();
         try {
-//            tx = session.beginTransaction();
             role = session.load(RoleE.class, id);
             if (role != null){
-                System.out.println("it is a getEntityById " + role.toString());
             }
             tx.commit();
         }catch (HibernateException e){
             tx.rollback();
             e.printStackTrace();
-            System.out.println("Error in method getEntityById " + e.getMessage());
         }finally {
-            System.out.println("Sesion close getEntityById - in class ROLE");
             session.close();
         }
         return role;
@@ -94,10 +85,8 @@ public class DAORole extends AbstractDAO<RoleE, Integer> implements DAORoleInter
         }catch(HibernateException e){
             tx.rollback();
             e.printStackTrace();
-            System.out.println("Error in method delete " + e.getMessage());
             return false;
         }finally {
-            System.out.println("Sesion close delete - in class ROLE");
             session.close();
         }
         return true;
@@ -113,10 +102,8 @@ public class DAORole extends AbstractDAO<RoleE, Integer> implements DAORoleInter
         }catch (HibernateException e){
             tx.rollback();
             e.printStackTrace();
-            System.out.println("Error in method create ROLE " + e.getMessage());
             return false;
         }finally {
-            System.out.println("Sesion close create - in class USER");
             session.close();
         }
         return true;
@@ -130,15 +117,12 @@ public class DAORole extends AbstractDAO<RoleE, Integer> implements DAORoleInter
         try {
             roleE = (RoleE) session.createCriteria(RoleE.class).add(Restrictions.eq("role", nameRole)).uniqueResult();
             if(roleE != null) {
-                System.out.println(roleE.toString());
             }
             tx.commit();
         }catch (HibernateException e){
             tx.rollback();
             e.printStackTrace();
-            System.out.println("Error in method getRoleByName " + e.getMessage());
         }finally {
-            System.out.println("Sesion close getRoleByName - in class ROLE");
             session.close();
         }
 

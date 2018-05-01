@@ -39,26 +39,16 @@ public class Slogon extends HttpServlet {
                     session.setAttribute("status", ua.getUser().getStatus());
                     out.print("redirect");
                     out.close();
-//                    response.sendRedirect(request.getContextPath() + "/home");
                 } else {
-                    System.out.println("TYTYTYTYTYTYTYTYTYTYTYTYTTYYTTYTYTYTYYT");
                     out.print(SystemMessage.getIncorrect());
                     out.close();
-//                    request.setAttribute("warning", SystemMessage.getIncorrect());
-//                    request.getRequestDispatcher("/WEB-INF/views/logon.jsp").forward(request, response);
                 }
             }else{
-                System.out.println("poppppppppppppppppppppppppppppppppppppppooopo");
                 out.print(request.getParameter("login") + SystemMessage.getConfirmAccount());
                 out.close();
-//                request.setAttribute("confirm", request.getParameter("login") + SystemMessage.getConfirmAccount());
-//                request.getRequestDispatcher("/WEB-INF/views/logon.jsp").forward(request, response);
             }
         }else{
-            System.out.println("____________--------------------------------------------------");
-            out.print(cef.getJsonObj());
-//            request.setAttribute("error", cef.getError());
-//            request.getRequestDispatcher("/WEB-INF/views/logon.jsp").forward(request, response);
+            out.print(cef.getJsonObj());;
         }
         out.close();
     }

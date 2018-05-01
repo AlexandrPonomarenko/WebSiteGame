@@ -1,0 +1,11 @@
+.timer {
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+.timer span {
+    color: red;
+    font-size: 36px;
+    font-weight: bold;
+}

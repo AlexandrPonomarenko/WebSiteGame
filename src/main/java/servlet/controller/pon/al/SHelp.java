@@ -31,22 +31,14 @@ public class SHelp extends HttpServlet {
             hp.send(request.getParameter("name"), request.getParameter("texthelp"));
         }else{
             if(cef.validHelp(request.getParameter("name"), request.getParameter("texthelp"), request.getParameter("email"))) {
-                System.out.println(request.getParameter("name") + "===" + request.getParameter("email") + "====" + request.getParameter("texthelp"));
                 hp.sendNoName(request.getParameter("name"), request.getParameter("email"), request.getParameter("texthelp"));
             }else{
-//                request.setAttribute("error", cef.getError());
-                System.out.println(cef.getJsonObj());
                 out.print(cef.getJsonObj());
                 out.close();
-                System.out.println("AAAASASASASSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSSS");
-//                request.getRequestDispatcher("WEB-INF/views/help.jsp").forward(request,response);
                 return;
             }
         }
-//        request.setAttribute("error", cef.getError());
-        System.out.println("GOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOODDDDDDDDDDDDDDDDDDDDD");
         out.print(SystemMessage.getSendMessage());
-//        request.getRequestDispatcher("WEB-INF/views/help.jsp").forward(request,response);
         out.close();
     }
 

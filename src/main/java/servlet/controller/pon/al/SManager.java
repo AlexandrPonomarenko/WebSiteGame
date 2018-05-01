@@ -20,11 +20,9 @@ public class SManager extends HttpServlet {
             ReportUser ru = new ReportUser();
             session.setAttribute("more",ru.getAllGames(request.getParameter("id")));
             session.setAttribute("selectuser",ru.getSelectUser());
-            System.out.println("+++++++++++++++++++++++");
             response.sendRedirect(request.getRequestURI() +  "/more");
         }else{
             session.setAttribute("send",request.getParameter("nickname"));
-            System.out.println("----------------------");
             response.sendRedirect(request.getContextPath() + "/info");
         }
     }

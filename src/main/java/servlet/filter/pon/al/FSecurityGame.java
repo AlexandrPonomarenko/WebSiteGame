@@ -13,7 +13,6 @@ public class FSecurityGame implements Filter {
     private FilterConfig fc;
     private CheckSecurityGames csg;
     public void destroy() {
-        System.out.println("FSecurityGame : DESTROY");
     }
 
     public void doFilter(ServletRequest req, ServletResponse resp, FilterChain chain) throws ServletException, IOException {
@@ -29,21 +28,20 @@ public class FSecurityGame implements Filter {
                 chain.doFilter(req, resp);
                 return;
             }
-        }else if(url.equals("/ready")){
-            chain.doFilter(req, resp);
-            return;
         }else if(url.equals("/play")){
             chain.doFilter(req, resp);
             return;
         }
 
-//        chain.doFilter(req, resp);
+//        else if(url.equals("/ready")){
+//            chain.doFilter(req, resp);
+//            return;
+//        }
     }
 
     public void init(FilterConfig config) throws ServletException {
         fc = config;
         csg = new CheckSecurityGames();
-//        System.out.println("FSecurityGame : INIT");
     }
 
 }

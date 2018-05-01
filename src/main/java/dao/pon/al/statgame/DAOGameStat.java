@@ -26,10 +26,8 @@ public class DAOGameStat extends AbstractDAO<GameStatE, Integer> {
         }catch (HibernateException e){
             tx.rollback();
             e.printStackTrace();
-            System.out.println("Error in method getAll " + e.getMessage());
             return gameStatES;
         }finally {
-            System.out.println("Sesion close getAll - in class GameStatE");
             session.close();
         }
         return gameStatES;
@@ -45,10 +43,7 @@ public class DAOGameStat extends AbstractDAO<GameStatE, Integer> {
         }catch(HibernateException e){
             tx.rollback();
             e.printStackTrace();
-            System.out.println("Error in method update GameStatE" + e.getMessage());
-            return null;
         }finally {
-            System.out.println("Sesion close update - in class GameStatE");
             session.close();
         }
         return entity;
@@ -60,18 +55,12 @@ public class DAOGameStat extends AbstractDAO<GameStatE, Integer> {
         Session session = HibernateUtil.getSessionFactory().openSession();
         Transaction tx = session.beginTransaction();
         try {
-//            tx = session.beginTransaction();
             gameStatE = session.load(GameStatE.class, id);
-            if (gameStatE != null){
-                System.out.println("it is a getEntityById " + gameStatE.toString());
-            }
             tx.commit();
         }catch (HibernateException e){
             tx.rollback();
             e.printStackTrace();
-            System.out.println("Error in method getEntityById " + e.getMessage());
         }finally {
-            System.out.println("Sesion close getEntityById - in class GameStatE");
             session.close();
         }
         return gameStatE;
@@ -90,10 +79,8 @@ public class DAOGameStat extends AbstractDAO<GameStatE, Integer> {
         }catch(HibernateException e){
             tx.rollback();
             e.printStackTrace();
-            System.out.println("Error in method delete " + e.getMessage());
             return false;
         }finally {
-            System.out.println("Sesion close delete - in class GameStatE");
             session.close();
         }
         return true;
@@ -109,10 +96,7 @@ public class DAOGameStat extends AbstractDAO<GameStatE, Integer> {
         }catch (HibernateException e){
             tx.rollback();
             e.printStackTrace();
-            System.out.println("Error in method create GameStatE" + e.getMessage());
-            return false;
         }finally {
-            System.out.println("Sesion close create - in class GameStatE");
             session.close();
         }
         return true;

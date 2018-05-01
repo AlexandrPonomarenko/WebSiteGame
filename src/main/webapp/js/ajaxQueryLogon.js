@@ -49,7 +49,7 @@
                         $('#n').val('');
                         $('#p').val('');
                     }else {
-                        window.location.replace("http://localhost:8080/WebSiteGame/home");
+                        window.location.replace(window.location.href = '//' + window.location.host + '/WebSiteGame/home');
                     }
                 }
             });

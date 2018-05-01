@@ -13,9 +13,7 @@
         createButton: function (id) {
             var self = this,
                 b = $('<button>').attr('data-button-value', id);
-
                 b.data('noEmpty', false);
-
             b.on('click', function (e) {
                 self.setButtonValue(b.attr('data-button-value'), self.mark);
                 $(self).trigger('button-event', { attr: b.attr('data-button-value'), button: b });
@@ -29,7 +27,9 @@
 
             $.each(["lt", "mt", "rt", "lm", "mm", "rm", "lb", "mb", "rb"], function (index, value) {
                 var b = self.createButton(value);
-                self.wrapper.append(b);
+                var buttonWrapper = $('<div class="button-wrapper">');
+                buttonWrapper.append(b);
+                self.wrapper.append(buttonWrapper);
                 self.buttons.push(b);
             });
 
@@ -57,7 +57,6 @@
 
             for (i = 0; i < this.buttons.length;i++) {
                 if (this.buttons[i].attr('data-button-value') === type) {
-                    // console.log(type + " --- " + " ++++++++ " + this.buttons[i].attr('data-button-value') + this.mark + " -- " + this.buttons[i].button[0].innerHTML);
                     result = this.buttons[i];
                     break;
                 }
@@ -68,11 +67,8 @@
 
         setButtonValue: function (type, value) {
             var button = this.getButtonByType(type);
-            console.log("COME IN setButtonValue " + button);
             if (button) {
                 button.data('noEmpty', true);
-                console.log("COME IN setButtonValue ----------------------- " + button.data('noEmpty') + value);
-                // this.setColor(button);
                 this.setDisableAll();
                 button[0].innerHTML = value;
                 this.setColors(button, value);
@@ -108,7 +104,6 @@
     });
 
     $(document).ready(function () {
-        // $("#game").append(div);
         window.Game = new _Game();
         console.log(window.Game);
     });

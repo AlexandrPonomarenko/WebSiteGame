@@ -20,10 +20,8 @@ public class SConfirm extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         uv = new UserValidator();
         if(uv.confirmKey(request.getParameter("key"))){
-            System.out.println("COME  IN CONFIRM PAGE");
             request.getRequestDispatcher("/WEB-INF/views/activate/confirm.jsp").forward(request, response);
         }else{
-            System.out.println("COME IN ERROR PAGE");
             request.getRequestDispatcher("/WEB-INF/views/activate/error.jsp").forward(request, response);
         }
 

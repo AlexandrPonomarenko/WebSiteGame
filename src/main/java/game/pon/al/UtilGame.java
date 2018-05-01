@@ -11,7 +11,6 @@ import java.util.List;
 import java.util.Set;
 
 public class UtilGame {
-//    private String [] tempArray = new String[3];
     private DAOGameStat daoGameStat;
     private DaoUser daoUser;
     private GameStatE gameStatE;
@@ -97,12 +96,12 @@ public class UtilGame {
         return false;
     }
 
-    public boolean checkOnlyUser(Client client){
-        if(checkUserByNull(client)){
-            return true;
-        }
-        return false;
-    }
+//    public boolean checkOnlyUser(Client client){
+//        if(checkUserByNull(client)){
+//            return true;
+//        }
+//        return false;
+//    }
 
     public boolean getFindSessionId(String id, Client client){
         if(client.getSessionId().equals(id)){
@@ -124,26 +123,14 @@ public class UtilGame {
         return client;
     }
 
-    public void fromSomebodyUser(String sessionId, List<Client> list, String player, String message){
-        Client client;
-        boolean flag;
-        client = getUserBySessionId(sessionId, list);
-        if(checkUserName(client.getName(), player)){
-//
-//            try {
-//                client.getSessionOpponent().getBasicRemote().sendText("NAKONETSTO it is from " + client.getName()+ " "+ message);
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-        }else{
-//            try {
-//                client.getSession().getBasicRemote().sendText("NAKONETSTO it is from " + client.getNameOpponent() + " "+ message);
-//            } catch (IOException e) {
-//                e.printStackTrace();
-//            }
-        }
-
-    }
+//    public void fromSomebodyUser(String sessionId, List<Client> list, String player, String message){
+//        Client client;
+//        boolean flag;
+//        client = getUserBySessionId(sessionId, list);
+//        if(checkUserName(client.getName(), player)){
+//        }else{
+//        }
+//    }
 
     public boolean checkGetOutLast(Client client){
         if(!client.getSession().isOpen() &&  !client.getSessionOpponent().isOpen()){
@@ -169,27 +156,18 @@ public class UtilGame {
         return false;
     }
 
-//    public boolean checkCountStep(Client client){
-//        if(client.getSteps() + 1 <= 9){
-//            return true;
-//        }
-//        return false;
-//    }
-
     public void incrementStep(Client client){
         System.out.println("METHOD  incrementStep SET STEPS BEFORE" + client.getSteps());
         client.setSteps(client.getSteps() - 1);
     }
 
-    public boolean ckeckValueMapGame(Client client, String key, String value){
-//        if(client.getMapGame().get(key) != null){
-            if(client.getMapGame().get(key).isEmpty()){
-                client.getMapGame().put(key, client.getMapGame().get(key) + value);
-                return true;
-            }
-//        }
-        return false;
-    }
+//    public boolean ckeckValueMapGame(Client client, String key, String value){
+//            if(client.getMapGame().get(key).isEmpty()){
+//                client.getMapGame().put(key, client.getMapGame().get(key) + value);
+//                return true;
+//            }
+//        return false;
+//    }
 
     public void setValueMapGame(Client client, String key , String value){
         client.getMapGame().put(key, client.getMapGame().get(key) + value);
@@ -220,7 +198,6 @@ public class UtilGame {
 
     public boolean checkAllStepLine(Client client, String key, String valueStep){
         switch (key){
-            //lefttop
             case "lt":
                 if(checkTopHorLinePlusReverse(client,valueStep) ||
                         checkLeftVerLinePlusReverse(client,valueStep) ||
@@ -229,7 +206,6 @@ public class UtilGame {
                     return true;
                 }
                 break;
-                //righttop
             case "rt":
                 if(checkTopHorLinePlusReverse(client,valueStep) ||
                         checkRightVerLinePlusReverse(client,valueStep) ||
@@ -238,7 +214,6 @@ public class UtilGame {
                     return true;
                 }
                 break;
-                //rightbot
             case "rb":
                 if(checkBottomHorLinePlusReverse(client,valueStep) ||
                         checkRightVerLinePlusReverse(client,valueStep) ||
@@ -247,7 +222,6 @@ public class UtilGame {
                     return true;
                 }
                 break;
-                //leftbot
             case "lb":
                 if(checkBottomHorLinePlusReverse(client,valueStep) ||
                         checkLeftVerLinePlusReverse(client,valueStep) ||

@@ -15,7 +15,6 @@ public class ReportUser {
     private SUtil util;
     private HttpSession session;
     private List<UserE> users;
-    private String nickname = "";
 
     public ReportUser(){
         daoUser = new DaoUser();
@@ -38,19 +37,11 @@ public class ReportUser {
         Set<GameStatE> games;
         user = daoUser.getEntityById(Integer.parseInt(id));
         games = user.getStatgame();
-        vievList(games);
         return  games;
     }
 
     public UserE getSelectUser(){
         return user;
     }
-
-    private void vievList(Set<GameStatE> set){
-        for (GameStatE g : set){
-            System.out.println(g.toString());
-        }
-    }
-
 
 }

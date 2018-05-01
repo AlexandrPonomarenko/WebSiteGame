@@ -27,7 +27,7 @@
     display: inline-block;
 }
 
-#game .con .wrapper button {
+#game .con .wrapper .button-wrapper {
     top: 0;
     left: 0;
     width: 33.3%;
@@ -37,3 +37,15 @@
     cursor: pointer;
     vertical-align: top;
 }
+
+#game .con .wrapper .button-wrapper button {
+    top: 50%;
+    left: 50%;
+    width: 95%;
+    height: 95%;
+    border: 0;
+    font-size: 3em;
+    position: absolute;
+    transform: translate(-50%, -50%);
+}
+

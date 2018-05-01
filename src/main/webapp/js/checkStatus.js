@@ -1,8 +1,8 @@
 (function ($) {
-    $(document).ready(function(word){
-        if(word === "ON"){
+    $(document).ready(function() {
+        if ($('#r').html() === "ON") {
             $('.status').css('color', 'darkgreen');
-        }else{
+        } else {
             $('.status').css('color', 'red');
         }
     });

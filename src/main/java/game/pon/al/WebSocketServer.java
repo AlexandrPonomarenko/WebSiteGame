@@ -30,35 +30,7 @@ public class WebSocketServer {
 
         if(session != null && session.isOpen()){
             control(parseToString(message), session);
-//            session.getBasicRemote().sendText("Hello world Mr. " + message);
         }
-//        splitArray  = utilGame.getSplitMessage(message);
-//        if(splitArray[splitArray.length - 2].equals("create")){
-//            String[] s = message.split(":");
-//            System.out.println(s[0] + " ++++ " + s[1] +" --" + s[2]);
-//            client = new Client(s[0], session);
-//            listPlayers.add(client);
-//            System.out.println(client.getName() + " ++++ " + client.getSession().getId());
-//        }else if(splitArray[splitArray.length - 2].equals("message")){
-//            client = utilGame.getUserBySessionId(session.getId(), listPlayers);
-//            if(utilGame.checkUserName(client.getName(), splitArray[0])){
-//                client.getSessionOpponent().getBasicRemote().sendText("NAKONETSTO it is from " + client.getName()+ " "+ message);
-//            }else{
-//                client.getSession().getBasicRemote().sendText("NAKONETSTO it is from " + client.getNameOpponent() + " "+ message);
-//            }
-//        }else if(!splitArray[splitArray.length - 2].equals("create") &&
-//                !splitArray[splitArray.length - 2].equals("message")){
-//                System.out.println(listPlayers.size() + " AAAAAAAAAAAAAAAAAAAAAAAAAA");
-//                String[] s = message.split(":");
-//                System.out.println(s[0] + " add " + s[1] + s[2]);
-//                client = utilGame.getAddPlayers(s[1], listPlayers);
-//                client.setNameOpponent(s[0]);
-//                client.setSessionOpponent(session);
-//
-//                System.out.println(client.getName() + " ffffff " + client.getSession().getId() + " ff " +
-//                client.getNameOpponent() + " fff " + client.getSessionOpponent().getId());
-//        }
-//        session.getBasicRemote().sendText("Hello world Mr. " + message);
     }
 
     @OnOpen
@@ -149,15 +121,6 @@ public class WebSocketServer {
             e.printStackTrace();
         }
     }
-
-//    private void sendInfoMessage(Client client, String message){
-//        try {
-//            client.getSession().getBasicRemote().sendText((String) toJson("SERVER", message + client.getNameOpponent()));
-//            client.getSessionOpponent().getBasicRemote().sendText((String) toJson("SERVER", message.substring(2,message.length()) + client.getName()));
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//    }
 
     private void sendInfoMessage(Client client, String message){
         try {
@@ -313,19 +276,21 @@ public class WebSocketServer {
             } else if (control.equals("between")) {
                 client.getSession().getBasicRemote().sendText(toJsonSend("SERVER: ", draw, "between", "-"));
                 client.getSessionOpponent().getBasicRemote().sendText(toJsonSend("SERVER: ", draw, "between", "-"));
+                utilGame.setVinOrLost(client.getName(), 1,0);
+                utilGame.setVinOrLost(client.getNameOpponent(), 1,0);
             } else if (control.equals("vin")) {
                 if (utilGame.checkUserName(client.getName(), nameClient)) {
                     client.getSession().getBasicRemote().sendText(toJsonSend("SERVER: " + client.getName(), vin, "vin", "-"));
                     client.getSessionOpponent().getBasicRemote().sendText(toJsonSend("SERVER: " + client.getNameOpponent(), key, value, "-"));
                     client.getSessionOpponent().getBasicRemote().sendText(toJsonSend("SERVER: " + client.getNameOpponent(), lose, "lose", "-"));
-                    utilGame.setVinOrLost(client.getName(), 1111,0);
-                    utilGame.setVinOrLost(client.getNameOpponent(), 0,222);
+                    utilGame.setVinOrLost(client.getName(), 1,0);
+                    utilGame.setVinOrLost(client.getNameOpponent(), 0,1);
                 } else {
                     client.getSession().getBasicRemote().sendText(toJsonSend("SERVER: " + client.getName(), key, value, "-"));
                     client.getSession().getBasicRemote().sendText(toJsonSend("SERVER: " + client.getName(), lose, "lose", "-"));
                     client.getSessionOpponent().getBasicRemote().sendText(toJsonSend("SERVER: " + client.getNameOpponent(), vin, "vin", "-"));
-                    utilGame.setVinOrLost(client.getName(), 0,111111);
-                    utilGame.setVinOrLost(client.getNameOpponent(), 555,0);
+                    utilGame.setVinOrLost(client.getName(), 0,1);
+                    utilGame.setVinOrLost(client.getNameOpponent(), 1,0);
                 }
             }
         }catch (IOException e){

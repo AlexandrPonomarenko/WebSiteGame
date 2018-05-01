@@ -19,21 +19,13 @@ public class SAdmin extends HttpServlet {
         ra = new ReportAdmin();
         out = response.getWriter();
         if(ra.checkButton(request).equals("more")){
-            System.out.println("doPost more");
             out.print("more");
-//            response.sendRedirect(request.getRequestURI() +  "/all");
         }else if(ra.checkButton(request).equals("send")){
-            System.out.println("doPost send");
             out.print("send");
-//            response.sendRedirect(request.getContextPath() + "/info");
         }else if(ra.checkButton(request).equals("delete")){
-            System.out.println("doPost delete");
             out.print(SystemMessage.getUserDelete());
-//            response.sendRedirect(request.getContextPath() + "/fullreport/all");
         }else if(ra.checkButton(request).equals("block")){
-            System.out.println("doPost block");
             out.print(SystemMessage.getUserBlock());
-//            response.sendRedirect(request.getContextPath() + "/fullreport/all");
         }
         out.close();
     }

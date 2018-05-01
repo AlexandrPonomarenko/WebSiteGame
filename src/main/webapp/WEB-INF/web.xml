@@ -14,10 +14,6 @@
     <filter>
         <filter-name>FAuthorization</filter-name>
         <filter-class>servlet.filter.pon.al.FAuthorization</filter-class>
-        <!--<init-param>-->
-            <!--<param-name>active</param-name>-->
-            <!--<param-value>true</param-value>-->
-        <!--</init-param>-->
     </filter>
 
     <filter-mapping>
@@ -33,7 +29,6 @@
     <filter-mapping>
         <filter-name>FSecurityGame</filter-name>
         <url-pattern>/create</url-pattern>
-        <url-pattern>/ready</url-pattern>
         <url-pattern>/play</url-pattern>
     </filter-mapping>
 
@@ -109,9 +104,4 @@
         <servlet-name>SMore</servlet-name>
         <url-pattern>/reportUser/more</url-pattern>
     </servlet-mapping>
-    <!--<jsp-config>-->
-        <!--<jsp-property-group>-->
-            <!--<url-pattern></url-pattern>-->
-        <!--</jsp-property-group>-->
-    <!--</jsp-config>-->
 </web-app>

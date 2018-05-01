@@ -7,11 +7,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CheckErrorFilds {
-//    private String name;
-//    private String password;
-//    private String txms;
-//    private String email;
-//    private String nickname;
     private JSONObject object;
     private Map<String, String> error;
     private boolean valid;
@@ -21,14 +16,6 @@ public class CheckErrorFilds {
         object = new JSONObject();
         valid = true;
     }
-
-//    public CheckErrorFilds(String name, String password, String txms, String email, String nickname) {
-//        this.name = name;
-//        this.password = password;
-//        this.txms = txms;
-//        this.email = email;
-//        this.nickname = nickname;
-//    }
 
     private boolean veryPassword(String p){
 
@@ -94,11 +81,6 @@ public class CheckErrorFilds {
             object.put("txms", "to be > 14 char");
             return false;
         }
-//        if(!txms.matches("[a-zA-Z]*")){
-//            error.put("txms", "wrong schema");
-//            System.out.println(" M : veryTxms OUT ");
-//            return false;
-//        }
         return true;
     }
 
@@ -163,14 +145,6 @@ public class CheckErrorFilds {
         return true;
     }
 
-//    public boolean validAuth2(String l, String ln, String f,String p,String pt,String e){
-//        if(veryNickName(l) && veryName(ln) && veryName(f) && veryPassword(p) &&
-//                veryPassword(pt) && verEquPasswords(p, pt) && veryEmail(e)){
-//            return true;
-//        }
-//        return false;
-//    }
-
     public boolean validAuth(String l, String ln, String f,String p,String pt,String e){
         if(!veryNickName(l)){
             valid = false;
@@ -196,13 +170,6 @@ public class CheckErrorFilds {
 
         return valid;
     }
-
-//    public boolean validAunt2(String l, String p){
-//        if(veryNickName(l) && veryPassword(p)){
-//            return true;
-//        }
-//        return false;
-//    }
 
     public boolean validAunt(String l, String p){
         if(!veryNickName(l)){

@@ -25,10 +25,8 @@ public class UserRegistration {
     public boolean checkLoginUser(String loginUser){
         UserE user = daoUser.findUserByNickName(loginUser);
         if(user != null){
-            System.out.println("TRUE");
             return valid = true;
         }
-        System.out.println("FALSE");
         return valid = false;
     }
 
@@ -41,7 +39,6 @@ public class UserRegistration {
         daoRole.update(role);
 
         userE = daoUser.findUserByNickName(userE.getNickname());
-        System.out.println("METHOD registrationUser work NORMALNO");
         return userE;
     }
 

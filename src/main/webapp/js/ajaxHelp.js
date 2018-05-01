@@ -1,7 +1,6 @@
 (function($) {
     function validateFormHelp(form) {
         var valid = true;
-        console.log($('#nam').val());
         if ($('#nam').val() === "" && $('#nam').val().length < 3) {
             $('#nickName').html("to be > 2 char and no empty");
             valid = false;
@@ -28,8 +27,6 @@
             if (!validateFormHelp('.form')) { return; }
 
             data[$('#comment').attr('name')] = $('textarea.form-control').val();
-
-            console.log(data);
             $.ajax({
                 type: 'POST',
                 data: data,
@@ -42,7 +39,6 @@
                         result = $.parseJSON(result);
 
                     } catch(e) {
-                        console.log(e);
                         isJSON = false;
                     }
                     console.log(result);
